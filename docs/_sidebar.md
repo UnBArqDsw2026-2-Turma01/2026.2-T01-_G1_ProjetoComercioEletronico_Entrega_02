@@ -8,12 +8,30 @@
   - SubEquipe 01
   - SubEquipe 02
   - SubEquipe 03
+    - [Ata de reunião do dia 04/09/26](/ReunioesAtas/Subequipe3/Ata04_09.md)
+    - [Gravação da reunião do dia 04/09/26](/ReunioesAtas/Subequipe3/Gravacao04_09.md)
 
 - **Base**
   - [1. Desenho de Software (Modelagem)](/Base/1.Modelagem.md)
   - Relatórios
       - [1.1.1. SubEquipe_01](/Base/Relatórios/1.1.1.SubEquipe_01.md)
       - [1.1.2. SubEquipe_02](/Base/Relatórios/1.1.2.SubEquipe_02.md)
-      - [1.1.3. SubEquipe_03](/Base/Relatórios/1.1.3.SubEquipe_03.md)
+      - 1.1.3. SubEquipe_03
+        - [Metodologia](/Base/Relatórios/Subequipe03/Metodologia.md)
+        - [Rastreabilidade da Metodologia](/Base/Relatórios/Subequipe03/RastreabilidadeMetodologia.md)
+        - Modelagem Estática
+            - [Diagrama de Classes]()
+            - [Diagrama de Componentes]()
+            - [Diagrama de Implantação]()
+            - [Diagrama de Pacotes]()
+            - [Diagrama de Casos de Uso]()
+        - Modelagem Dinâmica
+            - [Diagrama de Sequência]()
+            - [Fluxos Alternativos (Visão Comprimida]()
+            - [Fluxos Alternativos (Visão Expandida)]()
+            - [Abstrações Alternativas]()
+            - [Diagrama de Comunicação]()
+            - [Diagrama de Atividades]()
+            - [Diagrama de Estados]()
   - [1.2. Participações - Modelagem](/Base/1.2.ParticipacoesModelagem.md)
   - [1.3. Iniciativas Extras - Modelagem](/Base/1.3.IniciativasExtras.md)
