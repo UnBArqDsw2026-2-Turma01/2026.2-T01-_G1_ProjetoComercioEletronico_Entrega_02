@@ -8,6 +8,8 @@
   - SubEquipe 01
   - SubEquipe 02
   - SubEquipe 03
+    - [Ata de reunião do dia 04/09/26](/ReunioesAtas/Subequipe3/Ata04_09.md)
+    - [Gravação da reunião do dia 04/09/26](/ReunioesAtas/Subequipe3/Gravacao04_09.md)
 
 - **Base**
   - [1. Desenho de Software (Modelagem)](/Base/1.Modelagem.md)

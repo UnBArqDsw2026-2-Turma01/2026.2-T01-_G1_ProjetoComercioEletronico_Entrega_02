@@ -12,7 +12,7 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 | Evento | Data planejada | Planejado (metodologia) | Data realizada | Evidência | Status |
 |---|---|---|---|---|---|
-| Sprint 1 Planning | 04/09/2026 | Reunião no início da Semana 1 para montar o Sprint Backlog | | *(link da ata / link da reunião)* |  Pendente |
+| Sprint 1 Planning | 04/09/2026 | Reunião no início da Semana 1 para montar o Sprint Backlog | 04/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md)|  Concluído com evidência |
 | Daily check-in — Sprint 1 (dia 1) | 05/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
 | Daily check-in — Sprint 1 (dia 2) | 06/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
 | Daily check-in — Sprint 1 (dia 3) | 07/09/2026 |Check-in assíncrono diário | | *(screenshot das mensagens)*  |  Pendente |
@@ -95,3 +95,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
 | 1.0 | 04/09/2026 | Criação do documento de rastreabilidade da metodologia | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
+| 1.1 | 04/09/2026 | Adiciona rastreabilidade da Sprint 1 Planning | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
