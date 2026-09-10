@@ -20,11 +20,11 @@
         - [Metodologia](/Base/Relatórios/Subequipe03/Metodologia.md)
         - [Rastreabilidade da Metodologia](/Base/Relatórios/Subequipe03/RastreabilidadeMetodologia.md)
         - Modelagem Estática
-            - [Diagrama de Classes]()
-            - [Diagrama de Componentes]()
-            - [Diagrama de Implantação]()
+            - [Diagrama de Classes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeClasses.md)
+            - [Diagrama de Componentes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeComponentes.md)
+            - [Diagrama de Implantação](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeImplantacao.md)
             - [Diagrama de Pacotes]()
-            - [Diagrama de Casos de Uso]()
+            - [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeCasosDeUso.md)
         - Modelagem Dinâmica
             - [Diagrama de Sequência]()
             - [Fluxos Alternativos (Visão Comprimida]()

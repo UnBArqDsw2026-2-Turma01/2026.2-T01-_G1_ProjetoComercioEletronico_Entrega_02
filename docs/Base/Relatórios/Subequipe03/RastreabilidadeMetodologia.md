@@ -29,6 +29,7 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 *Legenda de status:* Concluído com evidência · Concluído sem evidência registrada · Pendente/não realizado
 
+
 ---
 
 ## 3. Matriz de rastreabilidade — Artefatos do Product Backlog
