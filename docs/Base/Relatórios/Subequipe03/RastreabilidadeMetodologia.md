@@ -13,13 +13,14 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | Evento | Data planejada | Planejado (metodologia) | Data realizada | Evidência | Status |
 |---|---|---|---|---|---|
 | Sprint 1 Planning | 04/09/2026 | Reunião no início da Semana 1 para montar o Sprint Backlog | 04/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md)|  Concluído com evidência |
-| Daily check-in — Sprint 1 (dia 1) | 05/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
-| Daily check-in — Sprint 1 (dia 2) | 06/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
-| Daily check-in — Sprint 1 (dia 3) | 07/09/2026 |Check-in assíncrono diário | | *(screenshot das mensagens)*  |  Pendente |
-| Daily check-in — Sprint 1 (dia 4) | 08/09/2026 |Check-in assíncrono diário | | *(screenshot das mensagens)*|  Pendente |
-| Sprint 1 Review | 09/09/2026 |Apresentação dos diagramas estáticos concluídos | | |  Pendente |
-| Sprint 1 Retrospective | 10/09/2026 |Reflexão sobre o processo da Sprint 1 | | |  Pendente |
-| Sprint 2 Planning | 11/09/2026 | Reunião no início da Semana 2 para montar o Sprint Backlog | | *(link da ata / link da reunião)* |  Pendente |
+| Daily check-in — Sprint 1 (dia 1) | 05/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Não realizado |
+| Daily check-in — Sprint 1 (dia 2) | 06/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Não realizado |
+| Daily check-in — Sprint 1 (dia 3) | 07/09/2026 |Check-in assíncrono diário | | *(screenshot das mensagens)*  |  Não realizado |
+| Daily check-in — Sprint 1 (dia 4) | 08/09/2026 | Check-in assíncrono diário | | [Evidência_Joaquim 1](/docs/Assets/Subequipe3/Check-in/Screenshot%20from%202026-09-11%2023-44-32.png)<br>[Evidência_Joaquim 2](/docs/Assets/Subequipe3/Check-in/evidencia_joaquim_2.png)<br>[Evidência_Julia 1](/docs/Assets/Subequipe3/Check-in/evidencia_julia_08_09.png)<br>[Evidência_Julia 1](/docs/Assets/Subequipe3/Check-in/evidencia2_julia_08_09.png)| Concluído com evidência |
+| Daily check-in — Sprint 1 (dia 5) | 09/09/2026 | Check-in assíncrono diário | | [Evidência_Joaquim](/docs/Assets/Subequipe3/Check-in/evidencia_joaquim_09_09.png)<br>[Evidência_Pedro](/docs/Assets/Subequipe3/Check-in/evidencia_pedro_09_09.png)<br>[Evidência_Joao](/docs/Assets/Subequipe3/Check-in/evidencia_joao_09_09.png) | Concluído com evidência |
+| Daily check-in — Sprint 1 (dia 6) | 10/09/2026 | Check-in assíncrono diário | |[Evidência_Pedro](/docs/Assets/Subequipe3/Check-in/evidencia_pedro_10_09.png)<br>[Evidência_Joao](/docs/Assets/Subequipe3/Check-in/evidencia_joao_10_09.png)<br>[Evidência_Joaquim](/docs/Assets/Subequipe3/Check-in/evidencia_joaquim_10_09.png) | Concluído com evidência |
+| Sprint 1 Review/Retrospective | 11/09/2026 |Reflexão sobre o processo da Sprint 1 | 11/09/26 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) |  Concluído com evidência |
+| Sprint 2 Planning | 11/09/2026 | Reunião no início da Semana 2 para montar o Sprint Backlog | 11/09/26 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) |  Concluído com evidência |
 | Daily check-in — Sprint 2 (dia 1) | 12/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
 | Daily check-in — Sprint 2 (dia 2) | 13/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
 | Daily check-in — Sprint 2 (dia 3) | 14/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
@@ -36,10 +37,10 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 | # | Item do backlog | Sprint | Responsável | Data de conclusão | Evidência (arquivo/commit) | Critério de Pronto atendido? | Status |
 |---|---|---|---|---|---|---|---|
-| 1 | Levantamento de entidades e atores do domínio | 1 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 2 | Diagrama de Classes | 1 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
+| 1 | Levantamento de entidades e atores do domínio | 1 | | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
+| 2 | Diagrama de Classes | 1 | | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
 | 3 | Diagrama de Objetos | 1 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 4 | Diagrama de Componentes | 1 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
+| 4 | Diagrama de Componentes | 1 | | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
 | 5 | Diagrama de Pacotes | 1 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
 | 6 | Diagrama de Casos de Uso | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
 | 7 | Diagrama de Sequência | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
@@ -69,11 +70,11 @@ Esta seção verifica se as adaptações descritas na metodologia (seção 7 do 
 
 | Adaptação planejada | Foi seguida na prática? | Observações / evidência |
 |---|---|---|
-| Sprints de 1 semana (em vez de 2-4 semanas) | ⬜ Sim / ⬜ Não | |
-| Daily Scrum substituído por check-in assíncrono | ⬜ Sim / ⬜ Não | |
-| Product Owner rotativo/compartilhado | ⬜ Sim / ⬜ Não | |
-| Backlog definido majoritariamente no início | ⬜ Sim / ⬜ Não | |
-| Review interno ao grupo (com validação ocasional do orientador) | ⬜ Sim / ⬜ Não | |
+| Sprints de 1 semana (em vez de 2-4 semanas) | ✅ Sim / ⬜ Não | |
+| Daily Scrum substituído por check-in assíncrono | ✅ Sim / ⬜ Não | |
+| Product Owner rotativo/compartilhado | ⬜ Sim / ✅ Não | |
+| Backlog definido majoritariamente no início | ✅ Sim / ⬜ Não | |
+| Review interno ao grupo (com validação ocasional do orientador) | ✅ Sim / ⬜ Não | |
 
 ---
 
