@@ -9,16 +9,15 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 ---
 
 ## 2. Matriz de rastreabilidade — Eventos (Ceremonies)
-
 | Evento | Data planejada | Planejado (metodologia) | Data realizada | Evidência | Status |
 |---|---|---|---|---|---|
 | Sprint 1 Planning | 04/09/2026 | Reunião no início da Semana 1 para montar o Sprint Backlog | 04/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md)|  Concluído com evidência |
 | Daily check-in — Sprint 1 (dia 1) | 05/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Não realizado |
 | Daily check-in — Sprint 1 (dia 2) | 06/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Não realizado |
 | Daily check-in — Sprint 1 (dia 3) | 07/09/2026 |Check-in assíncrono diário | | *(screenshot das mensagens)*  |  Não realizado |
-| Daily check-in — Sprint 1 (dia 4) | 08/09/2026 | Check-in assíncrono diário | | [Evidência_Joaquim 1](../../../Assets/Subequipe3/Check-in/Screenshot%20from%202026-09-11%2023-44-32.png)<br>[Evidência_Joaquim 2](/docs/Assets/Subequipe3/Check-in/evidencia_joaquim_2.png)<br>[Evidência_Julia 1](/docs/Assets/Subequipe3/Check-in/evidencia_julia_08_09.png)<br>[Evidência_Julia 1](/docs/Assets/Subequipe3/Check-in/evidencia2_julia_08_09.png)| Concluído com evidência |
-| Daily check-in — Sprint 1 (dia 5) | 09/09/2026 | Check-in assíncrono diário | | [Evidência_Joaquim](/docs/Assets/Subequipe3/Check-in/evidencia_joaquim_09_09.png)<br>[Evidência_Pedro](/docs/Assets/Subequipe3/Check-in/evidencia_pedro_09_09.png)<br>[Evidência_Joao](/docs/Assets/Subequipe3/Check-in/evidencia_joao_09_09.png) | Concluído com evidência |
-| Daily check-in — Sprint 1 (dia 6) | 10/09/2026 | Check-in assíncrono diário | |[Evidência_Pedro](/docs/Assets/Subequipe3/Check-in/evidencia_pedro_10_09.png)<br>[Evidência_Joao](/docs/Assets/Subequipe3/Check-in/evidencia_joao_10_09.png)<br>[Evidência_Joaquim](/docs/Assets/Subequipe3/Check-in/evidencia_joaquim_10_09.png) | Concluído com evidência |
+| Daily check-in — Sprint 1 (dia 4) | 08/09/2026 | Check-in assíncrono diário | | [Evidência_Joaquim 1](../../../Assets/Subequipe3/Check-in/Screenshot%20from%202026-09-11%2023-44-32.png ':ignore')<br>[Evidência_Joaquim 2](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_2.png ':ignore')<br>[Evidência_Julia 1](../../../Assets/Subequipe3/Check-in/evidencia_julia_08_09.png ':ignore')<br>[Evidência_Julia 2](../../../Assets/Subequipe3/Check-in/evidencia2_julia_08_09.png ':ignore')| Concluído com evidência |
+| Daily check-in — Sprint 1 (dia 5) | 09/09/2026 | Check-in assíncrono diário | | [Evidência_Joaquim](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_09_09.png ':ignore')<br>[Evidência_Pedro](../../../Assets/Subequipe3/Check-in/evidencia_pedro_09_09.png ':ignore')<br>[Evidência_Joao](../../../Assets/Subequipe3/Check-in/evidencia_joao_09_09.png ':ignore') | Concluído com evidência |
+| Daily check-in — Sprint 1 (dia 6) | 10/09/2026 | Check-in assíncrono diário | |[Evidência_Pedro](../../../Assets/Subequipe3/Check-in/evidencia_pedro_10_09.png ':ignore')<br>[Evidência_Joao](../../../Assets/Subequipe3/Check-in/evidencia_joao_10_09.png ':ignore')<br>[Evidência_Joaquim](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_10_09.png ':ignore') | Concluído com evidência |
 | Sprint 1 Review/Retrospective | 11/09/2026 |Reflexão sobre o processo da Sprint 1 | 11/09/26 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) |  Concluído com evidência |
 | Sprint 2 Planning | 11/09/2026 | Reunião no início da Semana 2 para montar o Sprint Backlog | 11/09/26 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) |  Concluído com evidência |
 | Daily check-in — Sprint 2 (dia 1) | 12/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
@@ -99,3 +98,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 1.0 | 04/09/2026 | Criação do documento de rastreabilidade da metodologia | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
 | 1.1 | 04/09/2026 | Adiciona rastreabilidade da Sprint 1 Planning | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
 | 1.2 | 12/09/2026 | Adiciona rastreabilidade das práticas da semana 1 | Pedro Henrique Gomes  | José Joaquim da Silva Neto |
+| 1.3 | 12/09/2026 | Arruma exibição das imagens de evidência | José Joaquim da Silva Neto | Pedro Henrique Gomes |
