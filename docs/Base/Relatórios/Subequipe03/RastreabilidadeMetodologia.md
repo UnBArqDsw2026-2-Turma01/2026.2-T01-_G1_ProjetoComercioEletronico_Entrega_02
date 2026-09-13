@@ -37,11 +37,11 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | # | Item do backlog | Sprint | Responsável | Data de conclusão | Evidência (arquivo/commit) | Critério de Pronto atendido? | Status |
 |---|---|---|---|---|---|---|---|
 | 1 | Levantamento de entidades e atores do domínio | 1 | | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
-| 2 | Diagrama de Classes | 1 | | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
-| 3 | Diagrama de Objetos | 1 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 4 | Diagrama de Componentes | 1 | | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
-| 5 | Diagrama de Pacotes | 1 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 6 | Diagrama de Casos de Uso | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
+| 2 | Diagrama de Classes | 1 | José Joaquim| | | ✅ Sim / ⬜ Não | ⬜ Pendente |
+| 3 | Diagrama de Implantação | 1 | Pedro Henrique | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
+| 4 | Diagrama de Componentes | 1 | João Paulo | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
+| 5 | Diagrama de Pacotes | 1 | | José Joaquim | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
+| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
 | 7 | Diagrama de Sequência | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
 | 8 | Diagrama de Atividades | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
 | 9 | Diagrama de Máquina de Estados | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
@@ -99,3 +99,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 1.1 | 04/09/2026 | Adiciona rastreabilidade da Sprint 1 Planning | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
 | 1.2 | 12/09/2026 | Adiciona rastreabilidade das práticas da semana 1 | Pedro Henrique Gomes  | José Joaquim da Silva Neto |
 | 1.3 | 12/09/2026 | Arruma exibição das imagens de evidência | José Joaquim da Silva Neto | Pedro Henrique Gomes |
+| 1.4 | 13/09/2026 | Adiciona responsabilidades | José Joaquim da Silva Neto | Pedro Henrique Gomes |
