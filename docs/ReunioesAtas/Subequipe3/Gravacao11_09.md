@@ -1,4 +1,4 @@
-# Gravação da reunião do dia 04/09/26
+# Gravação da reunião do dia 11/09/26
 
 A ata dessa reunião pode ser encontrada em [Ata de Reunião 11/09/26](ReunioesAtas/Subequipe3/Ata11_09)
 
