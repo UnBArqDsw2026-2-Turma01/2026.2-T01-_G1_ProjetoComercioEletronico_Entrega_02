@@ -8,6 +8,9 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 ---
 
+<a id="eventos"></a>
+
+
 ## 2. Matriz de rastreabilidade — Eventos (Ceremonies)
 | Evento | Data planejada | Planejado (metodologia) | Data realizada | Evidência | Status |
 |---|---|---|---|---|---|
@@ -69,11 +72,11 @@ Esta seção verifica se as adaptações descritas na metodologia (seção 7 do 
 
 | Adaptação planejada | Foi seguida na prática? | Observações / evidência |
 |---|---|---|
-| Sprints de 1 semana (em vez de 2-4 semanas) | ✅ Sim / ⬜ Não | |
-| Daily Scrum substituído por check-in assíncrono | ✅ Sim / ⬜ Não | |
-| Product Owner rotativo/compartilhado | ⬜ Sim / ✅ Não | |
-| Backlog definido majoritariamente no início | ✅ Sim / ⬜ Não | |
-| Review interno ao grupo (com validação ocasional do orientador) | ✅ Sim / ⬜ Não | |
+| Sprints de 1 semana (em vez de 2-4 semanas) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | |
+| Daily Scrum substituído por check-in assíncrono | <span style="color: #32CD32; font-weight: bold;">Sim</span> |[Ir para Daily](#eventos) |
+| Product Owner rotativo/compartilhado | <span style="color: #FF073A; font-weight: bold;">Não</span> | No nosso trabalho foi escolhido não adotar essa prática |
+| Backlog definido majoritariamente no início | <span style="color: #32CD32; font-weight: bold;">Sim</span> | |
+| Review interno ao grupo (com validação ocasional do orientador) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | |
 
 ---
 
@@ -102,3 +105,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 1.4 | 13/09/2026 | Adiciona responsabilidades | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 1.5 | 14/09/2026 | Adiciona rastreabilidade de daily | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
 | 1.6 | 14/09/2026 | Adiciona rastreabilidade dos artefatos feitos | José Joaquim da Silva Neto | Pedro Henrique Gomes |
+| 1.7 | 14/09/2026 | Atualiza formatação da página | José Joaquim da Silva Neto | Pedro Henrique Gomes |
