@@ -36,16 +36,16 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 | # | Item do backlog | Sprint | Responsável | Data de conclusão | Evidência (arquivo/commit) | Critério de Pronto atendido? | Status |
 |---|---|---|---|---|---|---|---|
-| 1 | Levantamento de entidades e atores do domínio | 1 | | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
-| 2 | Diagrama de Classes | 1 | José Joaquim| | | ✅ Sim / ⬜ Não | ⬜ Pendente |
-| 3 | Diagrama de Implantação | 1 | Pedro Henrique | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 4 | Diagrama de Componentes | 1 | João Paulo | | | ✅ Sim / ⬜ Não | ⬜ Pendente |
-| 5 | Diagrama de Pacotes | 1 | | José Joaquim | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 7 | Diagrama de Sequência | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 8 | Diagrama de Atividades | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 9 | Diagrama de Máquina de Estados | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
-| 10 | Revisão geral e consolidação | 2 | | | | ⬜ Sim / ⬜ Não | ⬜ Pendente |
+| 1 | Levantamento de entidades e atores do domínio | 1 | TODOS| | | Sim| <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 2 | Diagrama de Classes | 1 | José Joaquim | 11/09/26 | [Diagrama de Classes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeClasses.md) | Sim | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 3 | Diagrama de Implantação | 1 | Pedro Henrique | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 4 | Diagrama de Componentes | 1 | João Paulo | | | Sim | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 5 | Diagrama de Pacotes | 1 | José Joaquim | 13/09/26 | [Diagrama de Pacotes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDePacotes.md) | Sim | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 7 | Diagrama de Sequência | 2 | | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 8 | Diagrama de Atividades | 2 | José Joaquim e Pedro Henrique| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 9 | Diagrama de Máquina de Estados | 2 | João Paulo e Júlia Campos| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 10 | Revisão geral e consolidação | 2 | TODOS | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 
 O critério de "Pronto" referenciado nesta tabela é o definido na seção 8 da documentação da metodologia (revisão por outro integrante, consistência entre diagramas, versionamento e notação UML padrão).
 
@@ -101,3 +101,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 1.3 | 12/09/2026 | Arruma exibição das imagens de evidência | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 1.4 | 13/09/2026 | Adiciona responsabilidades | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 1.5 | 14/09/2026 | Adiciona rastreabilidade de daily | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
+| 1.6 | 14/09/2026 | Adiciona rastreabilidade dos artefatos feitos | José Joaquim da Silva Neto | Pedro Henrique Gomes |
