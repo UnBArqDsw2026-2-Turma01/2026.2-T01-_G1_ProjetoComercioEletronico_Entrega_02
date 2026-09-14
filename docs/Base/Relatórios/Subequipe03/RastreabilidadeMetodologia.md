@@ -22,7 +22,7 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | Sprint 2 Planning | 11/09/2026 | Reunião no início da Semana 2 para montar o Sprint Backlog | 11/09/26 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) |  Concluído com evidência |
 | Daily check-in — Sprint 2 (dia 1) | 12/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
 | Daily check-in — Sprint 2 (dia 2) | 13/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
-| Daily check-in — Sprint 2 (dia 3) | 14/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
+| Daily check-in — Sprint 2 (dia 3) | 14/09/2026 | Check-in assíncrono diário | | [Evidência_Grupo](../../../Assets/Subequipe3/Check-in/dailypresencial1409.jpeg ':ignore') |  Concluído com evidência |
 | Daily check-in — Sprint 2 (dia 4) | 15/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
 | Sprint 2 Review | 16/09/2026 |Apresentação final de todos os diagramas | | |  Pendente |
 | Sprint 2 Retrospective | 17/09/2026 |Reflexão sobre o processo geral do projeto | | |  Pendente |
@@ -100,3 +100,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 1.2 | 12/09/2026 | Adiciona rastreabilidade das práticas da semana 1 | Pedro Henrique Gomes  | José Joaquim da Silva Neto |
 | 1.3 | 12/09/2026 | Arruma exibição das imagens de evidência | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 1.4 | 13/09/2026 | Adiciona responsabilidades | José Joaquim da Silva Neto | Pedro Henrique Gomes |
+| 1.5 | 14/09/2026 | Adiciona rastreabilidade de daily | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
