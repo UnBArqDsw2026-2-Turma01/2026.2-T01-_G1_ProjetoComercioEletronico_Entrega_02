@@ -21,6 +21,7 @@
       - 1.1.3. SubEquipe_03
         - [Metodologia](/Base/Relatórios/Subequipe03/Metodologia.md)
         - [Rastreabilidade da Metodologia](/Base/Relatórios/Subequipe03/RastreabilidadeMetodologia.md)
+        - [Uso de IA generativa e lições aprendidas](/Base/Relatórios/Subequipe03/IAGenerativa.md)
         - Modelagem Estática
             - [Diagrama de Classes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeClasses.md)
             - [Diagrama de Componentes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeComponentes.md)
