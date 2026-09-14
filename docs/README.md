@@ -23,6 +23,39 @@ Demais diretrizes constam no Moodle.
 | 23/2030041  | Pedro Henrique Gomes | 3 |
 | 21/2005435  | Pedro Luciano de Azevedo | 1 |
 
+---
+
+## Subequipe 1
+
+| Matrícula | Aluno |
+| -- | -- |
+| 222024837  | Guilherme Costa Zanella  | 1 |
+| 211030620  | Patrick Anderson Carvalho dos Santos | 1 |
+| 212005435  | Pedro Luciano de Azevedo | 1 |
+
+---
+
+## Subequipe 2
+
+| Matrícula | Aluno |
+| -- | -- |
+| 221029220  | Guilherme Davila Rodrigues Carneiro Sampaio  | 2 |
+| 231027140  | Julia Oliveira Patricio  | 2 |
+| 231012281  | Maria Clara Sena de Lima  | 2 |
+
+---
+
+## Subequipe 3
+
+| Matrícula | Aluno |
+| -- | -- |
+| 232003652 | João Paulo Barbosa Pereira Nunes |
+| 232027510 | José Joaquim da Silva Neto |
+| 232027494 | Júlia Santana Campos |
+| 232030041 | Pedro Henrique Gomes |
+
+---
+
 ## Sobre 
 Contextualize, usando referências, links, e outros materiais como fontes.
 
@@ -45,4 +78,5 @@ Quaisquer outras informações adicionais podem ser descritas nessa seção.
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
 | 1.0 | 03/09/2026 | Estruturação inicial para a entrega 2 | José Joaquim da Silva Neto | Pedro Henrique Gomes |
+| 1.1 | 14/09/2026 | Adiciona tabelas dedicadas para cada subequipe | José Joaquim da Silva Neto | -- |
 
