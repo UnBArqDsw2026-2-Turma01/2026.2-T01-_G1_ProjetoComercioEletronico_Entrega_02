@@ -14,23 +14,24 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 ## 2. Matriz de rastreabilidade — Eventos (Ceremonies)
 | Evento | Data planejada | Planejado (metodologia) | Data realizada | Evidência | Status |
 |---|---|---|---|---|---|
-| Sprint 1 Planning | 04/09/2026 | Reunião no início da Semana 1 para montar o Sprint Backlog | 04/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md)|  Concluído com evidência |
+| Sprint 1 Planning | 04/09/2026 | Reunião no início da Semana 1 para montar o Sprint Backlog | 04/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md)| <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 1 (dia 1) | 05/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Não realizado |
 | Daily check-in — Sprint 1 (dia 2) | 06/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Não realizado |
 | Daily check-in — Sprint 1 (dia 3) | 07/09/2026 |Check-in assíncrono diário | | *(screenshot das mensagens)*  |  Não realizado |
-| Daily check-in — Sprint 1 (dia 4) | 08/09/2026 | Check-in assíncrono diário | | [Evidência_Joaquim 1](../../../Assets/Subequipe3/Check-in/Screenshot%20from%202026-09-11%2023-44-32.png ':ignore')<br>[Evidência_Joaquim 2](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_2.png ':ignore')<br>[Evidência_Julia 1](../../../Assets/Subequipe3/Check-in/evidencia_julia_08_09.png ':ignore')<br>[Evidência_Julia 2](../../../Assets/Subequipe3/Check-in/evidencia2_julia_08_09.png ':ignore')| Concluído com evidência |
-| Daily check-in — Sprint 1 (dia 5) | 09/09/2026 | Check-in assíncrono diário | | [Evidência_Joaquim](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_09_09.png ':ignore')<br>[Evidência_Pedro](../../../Assets/Subequipe3/Check-in/evidencia_pedro_09_09.png ':ignore')<br>[Evidência_Joao](../../../Assets/Subequipe3/Check-in/evidencia_joao_09_09.png ':ignore') | Concluído com evidência |
-| Daily check-in — Sprint 1 (dia 6) | 10/09/2026 | Check-in assíncrono diário | |[Evidência_Pedro](../../../Assets/Subequipe3/Check-in/evidencia_pedro_10_09.png ':ignore')<br>[Evidência_Joao](../../../Assets/Subequipe3/Check-in/evidencia_joao_10_09.png ':ignore')<br>[Evidência_Joaquim](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_10_09.png ':ignore') | Concluído com evidência |
-| Sprint 1 Review/Retrospective | 11/09/2026 |Reflexão sobre o processo da Sprint 1 | 11/09/26 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) |  Concluído com evidência |
-| Sprint 2 Planning | 11/09/2026 | Reunião no início da Semana 2 para montar o Sprint Backlog | 11/09/26 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) |  Concluído com evidência |
-| Daily check-in — Sprint 2 (dia 1) | 12/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
-| Daily check-in — Sprint 2 (dia 2) | 13/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
-| Daily check-in — Sprint 2 (dia 3) | 14/09/2026 | Check-in assíncrono diário | | [Evidência_Grupo](../../../Assets/Subequipe3/Check-in/dailypresencial1409.jpeg ':ignore') |  Concluído com evidência |
-| Daily check-in — Sprint 2 (dia 4) | 15/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Pendente |
-| Sprint 2 Review | 16/09/2026 |Apresentação final de todos os diagramas | | |  Pendente |
-| Sprint 2 Retrospective | 17/09/2026 |Reflexão sobre o processo geral do projeto | | |  Pendente |
+| Daily check-in — Sprint 1 (dia 4) | 08/09/2026 | Check-in assíncrono diário | 08/09/2026 | [Evidência_Joaquim 1](../../../Assets/Subequipe3/Check-in/Screenshot%20from%202026-09-11%2023-44-32.png ':ignore')<br>[Evidência_Joaquim 2](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_2.png ':ignore')<br>[Evidência_Julia 1](../../../Assets/Subequipe3/Check-in/evidencia_julia_08_09.png ':ignore')<br>[Evidência_Julia 2](../../../Assets/Subequipe3/Check-in/evidencia2_julia_08_09.png ':ignore')| <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
+| Daily check-in — Sprint 1 (dia 5) | 09/09/2026 | Check-in assíncrono diário | 09/09/2026 | [Evidência_Joaquim](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_09_09.png ':ignore')<br>[Evidência_Pedro](../../../Assets/Subequipe3/Check-in/evidencia_pedro_09_09.png ':ignore')<br>[Evidência_Joao](../../../Assets/Subequipe3/Check-in/evidencia_joao_09_09.png ':ignore') | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
+| Daily check-in — Sprint 1 (dia 6) | 10/09/2026 | Check-in assíncrono diário | 10/09/2026 |[Evidência_Pedro](../../../Assets/Subequipe3/Check-in/evidencia_pedro_10_09.png ':ignore')<br>[Evidência_Joao](../../../Assets/Subequipe3/Check-in/evidencia_joao_10_09.png ':ignore')<br>[Evidência_Joaquim](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_10_09.png ':ignore') | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
+| Sprint 1 Review/Retrospective | 11/09/2026 |Reflexão sobre o processo da Sprint 1 | 11/09/2026 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
+| Sprint 2 Planning | 11/09/2026 | Reunião no início da Semana 2 para montar o Sprint Backlog | 11/09/2026 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
+| Daily check-in — Sprint 2 (dia 1) | 12/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| Daily check-in — Sprint 2 (dia 2) | 13/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| Daily check-in — Sprint 2 (dia 3) | 14/09/2026 | Check-in assíncrono diário | | [Evidência_Grupo](../../../Assets/Subequipe3/Check-in/dailypresencial1409.jpeg ':ignore') | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
+| Daily check-in — Sprint 2 (dia 4) | 15/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| Sprint 2 Review | 16/09/2026 |Apresentação final de todos os diagramas | | |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| Sprint 2 Retrospective | 17/09/2026 |Reflexão sobre o processo geral do projeto | | |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 
-*Legenda de status:* Concluído com evidência · Concluído sem evidência registrada · Pendente/não realizado
+*Legenda de status:* <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> · <span style="color: #2c07ff; font-weight: bold;">Concluído sem evidência registrada</span>
+ · <span style="color: #FFD700; font-weight: bold;">Pendente</span> · <span style="color: #FF073A; font-weight: bold;">Não Realizado</span>
 
 
 ---
@@ -39,13 +40,13 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 | # | Item do backlog | Sprint | Responsável | Data de conclusão | Evidência (arquivo/commit) | Critério de Pronto atendido? | Status |
 |---|---|---|---|---|---|---|---|
-| 1 | Levantamento de entidades e atores do domínio | 1 | TODOS| | | Sim| <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 2 | Diagrama de Classes | 1 | José Joaquim | 11/09/26 | [Diagrama de Classes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeClasses.md) | Sim | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 3 | Diagrama de Implantação | 1 | Pedro Henrique | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 4 | Diagrama de Componentes | 1 | João Paulo | | | Sim | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 5 | Diagrama de Pacotes | 1 | José Joaquim | 13/09/26 | [Diagrama de Pacotes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDePacotes.md) | Sim | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 7 | Diagrama de Sequência | 2 | | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 1 | Levantamento de entidades e atores do domínio | 1 | TODOS| | Documentação realizada na entrega 1 a partir da engenharia reversa| <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 2 | Diagrama de Classes | 1 | José Joaquim | 11/09/26 | [Diagrama de Classes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeClasses.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 3 | Diagrama de Implantação | 1 | Pedro Henrique | | [Diagrama de Implantação](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeImplantacao.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 4 | Diagrama de Componentes | 1 | João Paulo | | [Diagrama de Componentes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeComponentes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 5 | Diagrama de Pacotes | 1 | José Joaquim | 13/09/26 | [Diagrama de Pacotes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDePacotes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | | [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeCasosDeUso.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 7 | Diagrama de Sequência | 2 | TODOS| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 | 8 | Diagrama de Atividades | 2 | José Joaquim e Pedro Henrique| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 | 9 | Diagrama de Máquina de Estados | 2 | João Paulo e Júlia Campos| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 | 10 | Revisão geral e consolidação | 2 | TODOS | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
@@ -72,11 +73,11 @@ Esta seção verifica se as adaptações descritas na metodologia (seção 7 do 
 
 | Adaptação planejada | Foi seguida na prática? | Observações / evidência |
 |---|---|---|
-| Sprints de 1 semana (em vez de 2-4 semanas) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | |
+| Sprints de 1 semana (em vez de 2-4 semanas) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | [Cronograma](#eventos) |
 | Daily Scrum substituído por check-in assíncrono | <span style="color: #32CD32; font-weight: bold;">Sim</span> |[Ir para Daily](#eventos) |
 | Product Owner rotativo/compartilhado | <span style="color: #FF073A; font-weight: bold;">Não</span> | No nosso trabalho foi escolhido não adotar essa prática |
-| Backlog definido majoritariamente no início | <span style="color: #32CD32; font-weight: bold;">Sim</span> | |
-| Review interno ao grupo (com validação ocasional do orientador) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | |
+| Backlog definido majoritariamente no início | <span style="color: #32CD32; font-weight: bold;">Sim</span> | [Backlog](/Base/Relatórios/Subequipe03/Metodologia.md#Backlog) |
+| Review interno ao grupo (com validação ocasional do orientador) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | As revisões dos trabalhos do grupo podem ser encontradas nas Atas e Gravações de Reuniões e também nas evidências de [daily](#eventos) |
 
 ---
 
