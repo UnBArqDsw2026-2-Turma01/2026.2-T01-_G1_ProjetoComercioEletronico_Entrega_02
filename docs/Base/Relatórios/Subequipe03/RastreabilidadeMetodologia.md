@@ -36,6 +36,8 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 ---
 
+<a id="matriz"></a>
+
 ## 3. Matriz de rastreabilidade — Artefatos do Product Backlog
 
 | # | Item do backlog | Sprint | Responsável | Data de conclusão | Evidência (arquivo/commit) | Critério de Pronto atendido? | Status |
@@ -59,11 +61,11 @@ O critério de "Pronto" referenciado nesta tabela é o definido na seção 8 da 
 
 | Papel (Scrum) | Integrante(s) responsável(is) | Evidência de exercício do papel |
 |---|---|---|
-| Product Owner | | *(ex: registros de priorização do backlog)* |
-| Scrum Master | | *(ex: atas das reuniões conduzidas)* |
-| Development Team | | *(ex: commits/autoria dos diagramas)* |
+| Product Owner | Pedro Henrique Gomes | *(ex: registros de priorização do backlog)* |
+| Scrum Master | José Joaquim da Silva Neto| *(ex: atas das reuniões conduzidas)* |
+| Development Team | TODOS | As evidências podem ser encontradas em [Matriz de rastreabilidade](#matriz) |
 
-> Caso os papéis tenham sido rotativos entre Sprints (conforme previsto na adaptação da metodologia), registre a mudança explicitamente, indicando quem assumiu cada papel em qual Sprint.
+> Não aconteceu papéis rotativos entre Sprints.
 
 ---
 
@@ -115,3 +117,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 2.0 | 15/09/2026 | Adiciona check in de participação diária do dia 12/09/26 | José Joaquim da Silva Neto | -- |
 | 2.1 | 15/09/2026 | Adiciona divergência na prática da metodologia | José Joaquim da Silva Neto | -- |
 | 2.2 | 15/09/2026 | Adiciona divergência na prática da metodologia durante as Dailys check-in do dia 05/09/2026 até 07/09/2026 | José Joaquim da Silva Neto | -- |
+| 2.3 | 15/09/2026 | Adiciona papéis exercidos durante as práticas da metodologia | José Joaquim da Silva Neto | Pedro Henrique Gomes |
