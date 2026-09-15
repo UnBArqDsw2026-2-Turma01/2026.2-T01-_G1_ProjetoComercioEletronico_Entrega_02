@@ -87,7 +87,7 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 
 | Divergência | Sprint em que ocorreu | Motivo | Ação tomada |
 |---|---|---|---|
-| *(exemplo: Diagrama de Pacotes não foi entregue na Sprint 1)* | | | |
+| No planejamento inicial para a entrega o grupo combinou que a daily seria realizada remotamente respondendo 3 perguntas, sendo elas: O que modelei ontem? O que vou modelar hoje? Há algum bloqueio ou dúvida?. Tanto a reunião quando a ata do planejamento inicial podem ser acessadas por aqui: <br>[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md). | 1 e 2 | Adversidades do dia a dia | Para contornar esse problema, a equipe decidiu se comunicar de forma mais natural e também se comunicar pessoalmente quando possível.|
 
 ---
 
