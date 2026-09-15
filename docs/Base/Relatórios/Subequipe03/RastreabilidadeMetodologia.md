@@ -15,9 +15,9 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | Evento | Data planejada | Planejado (metodologia) | Data realizada | Evidência | Status |
 |---|---|---|---|---|---|
 | Sprint 1 Planning | 04/09/2026 | Reunião no início da Semana 1 para montar o Sprint Backlog | 04/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md)| <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
-| Daily check-in — Sprint 1 (dia 1) | 05/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Não realizado |
-| Daily check-in — Sprint 1 (dia 2) | 06/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  Não realizado |
-| Daily check-in — Sprint 1 (dia 3) | 07/09/2026 |Check-in assíncrono diário | | *(screenshot das mensagens)*  |  Não realizado |
+| Daily check-in — Sprint 1 (dia 1) | 05/09/2026 | Check-in assíncrono diário | <span style="color: #FF073A; font-weight: bold;">Não Realizado</span> | [Justificativa de divergência](#divergencias) |  <span style="color: #FF073A; font-weight: bold;">Não Realizado</span> |
+| Daily check-in — Sprint 1 (dia 2) | 06/09/2026 | Check-in assíncrono diário | <span style="color: #FF073A; font-weight: bold;">Não Realizado</span> | [Justificativa de divergência](#divergencias) | <span style="color: #FF073A; font-weight: bold;">Não Realizado</span> |
+| Daily check-in — Sprint 1 (dia 3) | 07/09/2026 |Check-in assíncrono diário | <span style="color: #FF073A; font-weight: bold;">Não Realizado</span> | [Justificativa de divergência](#divergencias)  | <span style="color: #FF073A; font-weight: bold;">Não Realizado</span> |
 | Daily check-in — Sprint 1 (dia 4) | 08/09/2026 | Check-in assíncrono diário | 08/09/2026 | [Evidência_Joaquim 1](../../../Assets/Subequipe3/Check-in/Screenshot%20from%202026-09-11%2023-44-32.png ':ignore')<br>[Evidência_Joaquim 2](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_2.png ':ignore')<br>[Evidência_Julia 1](../../../Assets/Subequipe3/Check-in/evidencia_julia_08_09.png ':ignore')<br>[Evidência_Julia 2](../../../Assets/Subequipe3/Check-in/evidencia2_julia_08_09.png ':ignore')| <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 1 (dia 5) | 09/09/2026 | Check-in assíncrono diário | 09/09/2026 | [Evidência_Joaquim](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_09_09.png ':ignore')<br>[Evidência_Pedro](../../../Assets/Subequipe3/Check-in/evidencia_pedro_09_09.png ':ignore')<br>[Evidência_Joao](../../../Assets/Subequipe3/Check-in/evidencia_joao_09_09.png ':ignore') | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 1 (dia 6) | 10/09/2026 | Check-in assíncrono diário | 10/09/2026 |[Evidência_Pedro](../../../Assets/Subequipe3/Check-in/evidencia_pedro_10_09.png ':ignore')<br>[Evidência_Joao](../../../Assets/Subequipe3/Check-in/evidencia_joao_10_09.png ':ignore')<br>[Evidência_Joaquim](../../../Assets/Subequipe3/Check-in/evidencia_joaquim_10_09.png ':ignore') | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
@@ -81,13 +81,16 @@ Esta seção verifica se as adaptações descritas na metodologia (seção 7 do 
 
 ---
 
+<a id="divergencias"></a>
+
 ## 6. Divergências identificadas
 
 Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efetivamente ocorreu durante a execução do projeto — por exemplo, itens do backlog que mudaram de Sprint, reuniões que não puderam ocorrer, ou ajustes de responsáveis.
 
 | Divergência | Sprint em que ocorreu | Motivo | Ação tomada |
 |---|---|---|---|
-| No planejamento inicial para a entrega o grupo combinou que a daily seria realizada remotamente respondendo 3 perguntas, sendo elas: O que modelei ontem? O que vou modelar hoje? Há algum bloqueio ou dúvida?. Tanto a reunião quando a ata do planejamento inicial podem ser acessadas por aqui: <br>[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md). | 1 e 2 | Adversidades do dia a dia | Para contornar esse problema, a equipe decidiu se comunicar de forma mais natural e também se comunicar pessoalmente quando possível.|
+| No planejamento inicial para a entrega o grupo combinou que a daily seria realizada remotamente respondendo 3 perguntas, sendo elas: O que modelei ontem? O que vou modelar hoje? Há algum bloqueio ou dúvida?. Tanto a reunião quando a ata do planejamento inicial podem ser acessadas por aqui: <br>[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md). | 1 e 2 | Adversidades do dia a dia | Para contornar esse problema, a equipe decidiu se comunicar de forma mais natural e também se comunicar pessoalmente quando possível|
+| As Dailys check-in do dia 05/09/2026 até o dia 07/09/2026 acabaram não sendo realizadas| 1 | Os membros se esqueceram de participar, porém estavam realizados pesquisas e estudando os conteúdos dessa entrega| Fortalecer o compromisso de participação |
 
 ---
 
@@ -111,3 +114,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 1.9 | 15/09/2026 | Adiciona check in de participação diária do dia 15/09/26 | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 2.0 | 15/09/2026 | Adiciona check in de participação diária do dia 12/09/26 | José Joaquim da Silva Neto | -- |
 | 2.1 | 15/09/2026 | Adiciona divergência na prática da metodologia | José Joaquim da Silva Neto | -- |
+| 2.2 | 15/09/2026 | Adiciona divergência na prática da metodologia durante as Dailys check-in do dia 05/09/2026 até 07/09/2026 | José Joaquim da Silva Neto | -- |
