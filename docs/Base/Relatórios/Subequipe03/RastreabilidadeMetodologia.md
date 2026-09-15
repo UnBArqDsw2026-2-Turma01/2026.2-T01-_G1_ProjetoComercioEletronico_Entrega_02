@@ -24,7 +24,7 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | Sprint 1 Review/Retrospective | 11/09/2026 |Reflexão sobre o processo da Sprint 1 | 11/09/2026 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Sprint 2 Planning | 11/09/2026 | Reunião no início da Semana 2 para montar o Sprint Backlog | 11/09/2026 |[Ata da reunião](/ReunioesAtas/Subequipe3/Ata04_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao04_09.md) | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 2 (dia 1) | 12/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| Daily check-in — Sprint 2 (dia 2) | 13/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| Daily check-in — Sprint 2 (dia 2) | 13/09/2026 | Check-in assíncrono diário | | [Evidência Joaquim](../../../Assets/Subequipe3/Check-in/EvidenciaJoaquim1309.jpeg ':ignore')<br> [Evidência Pedro](../../../Assets/Subequipe3/Check-in/EvidenciaPedro1309.jpeg ':ignore') |  <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 2 (dia 3) | 14/09/2026 | Check-in assíncrono diário | | [Evidência_Grupo](../../../Assets/Subequipe3/Check-in/dailypresencial1409.jpeg ':ignore') | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 2 (dia 4) | 15/09/2026 | Check-in assíncrono diário | | *(screenshot das mensagens)* |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 | Sprint 2 Review | 16/09/2026 |Apresentação final de todos os diagramas | | |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
@@ -107,3 +107,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 1.5 | 14/09/2026 | Adiciona rastreabilidade de daily | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
 | 1.6 | 14/09/2026 | Adiciona rastreabilidade dos artefatos feitos | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 1.7 | 14/09/2026 | Atualiza formatação da página | José Joaquim da Silva Neto | Pedro Henrique Gomes |
+| 1.8 | 14/09/2026 | Adiciona check in de participação diária do dia 13/09/26 | José Joaquim da Silva Neto | Pedro Henrique Gomes |
