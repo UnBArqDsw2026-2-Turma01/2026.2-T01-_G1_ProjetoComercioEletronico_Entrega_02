@@ -110,3 +110,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 1.8 | 15/09/2026 | Adiciona check in de participação diária do dia 13/09/26 | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 1.9 | 15/09/2026 | Adiciona check in de participação diária do dia 15/09/26 | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 2.0 | 15/09/2026 | Adiciona check in de participação diária do dia 12/09/26 | José Joaquim da Silva Neto | -- |
+| 2.1 | 15/09/2026 | Adiciona divergência na prática da metodologia | José Joaquim da Silva Neto | -- |
