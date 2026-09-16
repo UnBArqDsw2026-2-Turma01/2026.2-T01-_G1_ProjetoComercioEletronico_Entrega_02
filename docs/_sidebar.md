@@ -6,6 +6,7 @@
 - Reuniões e Atas
   - [Modelo de Ata](/ReunioesAtas/ModeloAta.md)
   - SubEquipe 01
+    - [Ata de reunião do dia 12/09/26](/ReunioesAtas/Subequipe1/Ata12_09.md)
   - SubEquipe 02
   - SubEquipe 03
     - [Ata de reunião do dia 04/09/26](/ReunioesAtas/Subequipe3/Ata04_09.md)
@@ -17,6 +18,15 @@
   - [1. Desenho de Software (Modelagem)](/Base/1.Modelagem.md)
   - Relatórios
       - [1.1.1. SubEquipe_01](/Base/Relatórios/1.1.1.SubEquipe_01.md)
+        - [Uso de IA generativa e lições aprendidas](/Base/Relatórios/Subequipe01/IAGenerativa.md)
+        - Modelagem Estática
+            - [Diagrama de Classes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeClasses.md)
+            - [Diagrama de Componentes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeComponentes.md)
+            - [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeCasosDeUso.md)
+        - Modelagem Dinâmica
+            - [Diagrama de Sequência](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeSequencia.md)
+            - [Diagrama de Máquina de Estados](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md)
+            - [Diagrama de Atividades](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeAtividades.md)
       - [1.1.2. SubEquipe_02](/Base/Relatórios/1.1.2.SubEquipe_02.md)
       - 1.1.3. SubEquipe_03
         - [Metodologia](/Base/Relatórios/Subequipe03/Metodologia.md)
@@ -33,7 +43,7 @@
             - [Diagrama de Atividades](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeAtividades.md)
             - [Diagrama de Estados](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md)
   - [1.2. Participações - Modelagem](/Base/1.2.ParticipacoesModelagem.md)
-    - [1.2.1 SubEquipe01]()
+    - [1.2.1 SubEquipe01](/Base/Participacoes/ParticipacoesSubequipe1.md)
     - [1.2.2 SubEquipe02]()
     - [1.2.3 SubEquipe03](/Base/Participacoes/ParticipacoesSubequipe3.md)
 
