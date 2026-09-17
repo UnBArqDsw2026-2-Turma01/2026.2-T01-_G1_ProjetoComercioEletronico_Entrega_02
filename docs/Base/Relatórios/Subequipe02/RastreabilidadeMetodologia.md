@@ -27,10 +27,10 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 | # | Item do backlog | Responsável | Data de conclusão | Evidência (arquivo/commit) | Critério de Pronto atendido? | Status |
 |---|---|---|---|---|---|---|
-| 1 | Diagrama de Classes | | | [Diagrama de Classes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeClasses.md) | | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 1 | Diagrama de Classes | Julia Oliveira Patricio | 17/09/2026 | [Diagrama de Classes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeClasses.md) · [Commit da contribuição](COLOQUE_AQUI_O_LINK_DO_SEU_COMMIT) | Sim | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | 2 | Diagrama de Componentes | | | [Diagrama de Componentes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeComponentes.md) | | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 | 3 | Diagrama de Casos de Uso | | | [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeCasosDeUso.md) | | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 4 | Diagrama de Sequência | | | [Diagrama de Sequência](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeSequencia.md) | | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 4 | Diagrama de Sequência | Julia Oliveira Patricio | 17/09/2026 | [Diagrama de Sequência](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeSequencia.md) · [Commit da contribuição](COLOQUE_AQUI_O_LINK_DO_SEU_COMMIT) | Sim | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | 5 | Diagrama de Atividades | | | [Diagrama de Atividades](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeAtividades.md) | | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 | 6 | Diagrama de Máquina de Estados | | | [Diagrama de Máquina de Estados](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) | | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 | 7 | Revisão geral e consolidação | Todos | | | | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
@@ -43,7 +43,7 @@ O critério de "Pronto" referenciado nesta tabela é o definido na seção 6 da 
 
 | Papel | Integrante(s) responsável(is) | Evidência de exercício do papel |
 |---|---|---|
-| *(a preencher)* | | |
+| Pessoa A — Modelagem Estática (Diagrama de Classes) e Modelagem Dinâmica (Diagrama de Sequência) | Julia Oliveira Patricio | [Diagrama de Classes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeClasses.md) · [Diagrama de Sequência](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeSequencia.md) · [Relato de IA Generativa](/Base/Relatórios/Subequipe02/IAGenerativa.md) |
 
 ---
 
@@ -66,3 +66,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
 | 1.0 | 17/09/2026 | Criação do documento de rastreabilidade da metodologia | Maria Clara | -- |
+| 1.1 | 17/09/2026 | Preenchimento da rastreabilidade dos itens de backlog (Diagrama de Classes e Diagrama de Sequência) e do papel exercido por Julia Oliveira Patricio | Julia Oliveira Patricio | -- |
