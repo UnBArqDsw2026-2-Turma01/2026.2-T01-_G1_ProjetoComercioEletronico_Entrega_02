@@ -1,6 +1,36 @@
-# Uso de IA Generativa e Lições Aprendidas
+# IA Generativa — lições aprendidas e senso crítico
 
-O Foco 03 da entrega pede o ponto de vista **individual** de cada integrante sobre as lições aprendidas e sobre o uso de IA generativa, com senso crítico. Conforme a [ata de 12/09/2026](/ReunioesAtas/Subequipe1/Ata12_09.md), cada integrante da Subequipe 01 redige e commita a própria seção. O resumo de cada ponto de vista está no [relatório da subequipe](/Base/Relatórios/1.1.1.SubEquipe_01.md); o relato completo está aqui.
+Conforme o Foco 03 de [1.1.1. SubEquipe_01](/Base/Relatórios/1.1.1.SubEquipe_01.md), cada integrante registra aqui, individualmente, o que aprendeu na modelagem UML desta entrega e como utilizou — e onde desconfiou de — IA generativa. Esta página segue o formato da [página equivalente da Entrega 1](https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-_G1_ProjetoComercioEletronico_Entrega_01/#/Base/Relat%C3%B3rios/SubEquipe01/IAGenerativa).
+
+---
+
+## Pedro Luciano de Azevedo
+
+### Lições aprendidas
+
+**A decisão mais importante do modelo de domínio já estava escrita.** `Produto` separado de `Anuncio` — item de catálogo *versus* oferta de um vendedor — é o que dá coerência a tudo: é por isso que o carrinho agrupa por vendedor, que o pedido tem um envio por vendedor, que a avaliação é sobre a oferta. Eu não inventei essa decisão nesta entrega. Ela estava na seção 7 da Engenharia Reversa da Entrega 1, *o que só aparece juntando os três recortes*, esperando alguém ler o recorte C do Patrick ao lado do meu recorte A. Modelagem, aprendi, é menos sobre criar abstrações e mais sobre reconhecer as que a observação já produziu.
+
+**O diagrama de sequência explica falhas; não só as registra.** Na Entrega 1, RNF-A02 — preservar filtros *e posição* ao voltar à listagem — ficou registrado como requisito não satisfeito, e o SIG culpou a rolagem infinita com um `−−`. Era uma observação empírica: "a listagem reinicia do topo". O diagrama de sequência transformou isso numa explicação: a URL recebe a consulta com `pagina` na mensagem 14; a rolagem carrega páginas sem atualizar esse campo, porque não há transição de página do ponto de vista do comprador; o "voltar" reconstrói a consulta da URL e obtém a página 1. Filtro certo, posição errada, por construção. Entendi que a ordem temporal é um instrumento de diagnóstico, e que um modelo dinâmico bem feito é uma hipótese causal, não uma ilustração.
+
+**Sequência e atividades respondem perguntas diferentes.** Escolhi sequência para o meu fluxo porque a pergunta era *que participante é responsável por cada resposta*, e o Guilherme ficou com atividades porque a pergunta dele era *sob que condição cada desfecho acontece*. São os dois diagramas dinâmicos mais parecidos da UML, e a escolha errada produziria um diagrama que não erra nada e não diz nada.
+
+### Uso da IA Generativa
+
+Durante o desenvolvimento desta entrega, utilizei ferramentas de IA generativa como apoio para consultas, esclarecimento de dúvidas sobre a notação UML, revisão de decisões de modelagem e obtenção de feedback sobre possíveis inconsistências nos diagramas. A elaboração do modelo, a análise dos requisitos e a validação das decisões foram conduzidas por mim, com base nos registros de engenharia reversa e nas evidências levantadas pela subequipe na Entrega 1.
+
+A IA foi utilizada principalmente como uma ferramenta de consulta e apoio à revisão, ajudando a identificar pontos que poderiam estar incorretos, pouco claros ou que mereciam uma análise mais cuidadosa. Seu uso não substituiu a interpretação das evidências nem a avaliação crítica necessária para a construção dos modelos.
+
+**Onde ajudou.** As consultas foram úteis para esclarecer dúvidas sobre elementos da notação UML, como composição, generalização, interfaces, relacionamentos `«include»` e `«extend»`, estados compostos, bifurcações e junções. Também utilizei a IA para obter feedback sobre decisões de modelagem e verificar se determinadas representações faziam sentido diante das informações documentadas. Um exemplo foi a discussão sobre a distinção entre `Produto` e `Anuncio`, na qual a consulta ajudou a retomar os argumentos registrados na seção 7 da nossa Engenharia Reversa. Nesse caso, o valor da ferramenta esteve em auxiliar a análise de um material que já havia sido produzido pela equipe, e não em estabelecer a decisão por conta própria.
+
+**Onde exigiu revisão.** As respostas da IA nem sempre consideraram adequadamente o contexto específico do projeto. Em algumas consultas, foram apontadas representações que precisavam ser revistas, como a mistura de elementos de casos de uso em um diagrama de classes. Além disso, o feedback sobre a estrutura visual dos diagramas não substituiu a necessidade de analisar as imagens reais feitas por nós. O primeiro Diagrama de Classes, por exemplo, apresentava problemas de legibilidade, com largura excessiva e notas de rastreabilidade distantes das classes correspondentes. A identificação desses problemas dependeu da inspeção visual do resultado e da avaliação das necessidades de comunicação do modelo.
+
+**Onde exigiu senso crítico.** Um dos principais cuidados foi distinguir informações efetivamente observadas durante a engenharia reversa de hipóteses e inferências sobre o funcionamento do sistema. A IA pode apresentar explicações plausíveis sobre comportamentos que não foram observados, mas isso não significa que essas explicações correspondam ao sistema real. Por exemplo, os acontecimentos posteriores ao estado `Pago`, como preparação, envio, entrega e disputa, não foram observados pela subequipe na Entrega 1. Da mesma forma, a possibilidade de reembolso automático por ausência de resposta do vendedor e a existência de novas tentativas após o estado `Recusado` são hipóteses que precisam ser diferenciadas dos achados documentados.
+
+Esses exemplos reforçaram a importância de não tratar uma resposta convincente como evidência. As informações levantadas na engenharia reversa foram utilizadas como referência para avaliar as sugestões e identificar quais elementos tinham sustentação documental e quais precisavam ser tratados como inferências.
+
+**O que passei a fazer.** Passei a utilizar a IA como uma ferramenta de apoio à análise, consultando-a quando surgiam dúvidas e solicitando feedback sobre possíveis erros, inconsistências ou pontos que poderiam ser melhorados. Entretanto, mantive a responsabilidade pela avaliação das respostas e de sua veracidade.
+
+A principal lição que levo é que a IA pode contribuir para a revisão e o aprofundamento da análise, mas suas respostas precisam ser confrontadas com as evidências e com o conhecimento do domínio. Utilizá-la de forma crítica significa reconhecer que ela pode apontar problemas relevantes, mas também apresentar sugestões inadequadas ou explicações que não correspondem ao sistema analisado.
 
 ---
 
@@ -48,4 +78,5 @@ O Foco 03 da entrega pede o ponto de vista **individual** de cada integrante sob
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
-| 1.0 | 17/09/2026 | Criação da página e redação do ponto de vista de Patrick Anderson sobre lições aprendidas e uso de IA generativa | Patrick Anderson | -- |
+| 1.0    | 16/09/2026 | Criação da página; lições aprendidas e senso crítico sobre o uso de IA generativa na modelagem UML | Pedro Luciano de Azevedo | --          |
+| 1.1 | 17/09/2026 | Criação da página e redação do ponto de vista de Patrick Anderson sobre lições aprendidas e uso de IA generativa | Patrick Anderson | -- |
