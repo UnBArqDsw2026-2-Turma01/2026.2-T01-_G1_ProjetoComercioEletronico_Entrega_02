@@ -8,6 +8,7 @@
   - SubEquipe 01
     - [Ata de reunião do dia 12/09/26](/ReunioesAtas/Subequipe1/Ata12_09.md)
     - [Ata de reunião do dia 16/09/26](/ReunioesAtas/Subequipe1/Ata16_09.md)
+    - [Ata de reunião do dia 17/09/26](/ReunioesAtas/Subequipe1/Ata17_09.md)
   - SubEquipe 02
   - SubEquipe 03
     - [Ata de reunião do dia 04/09/26](/ReunioesAtas/Subequipe3/Ata04_09.md)
