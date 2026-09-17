@@ -36,7 +36,29 @@ A principal lição que levo é que a IA pode contribuir para a revisão e o apr
 
 ## Guilherme Costa Zanella
 
---
+### Lições aprendidas
+
+**O Rich Picture já continha dois diagramas UML.** A estrutura que Monk e Howard (1998) pedem — sete *stakeholders* e duas fronteiras — é a lista de atores do meu Diagrama de Casos de Uso; o processo de reclamação é o meu Diagrama de Atividades inteiro. Modelar, aqui, foi reler com outra gramática um desenho que já existia. E o registro sobreviveu à intenção: grafei a tensão entre loja oficial e vendedor autônomo para mostrar conflito, e ela acabou virando generalização de atores, que não tem nada a ver com conflito.
+
+**`«include»` e `«extend»` são afirmações, não estilo.** A pergunta "acontece sempre ou só às vezes?" torna cada um dos doze relacionamentos do Diagrama de Casos de Uso verificável contra uma regra de negócio. No primeiro rascunho, `Descrever produto do zero` estava pendurado como `«include»`, e com isso o diagrama afirmava que toda publicação passa por descrição livre — o contrário de RN-C04, que é observada. Um estereótipo errado não deixa o diagrama feio; deixa-o falso.
+
+**O mesmo fato admite duas modelagens certas, e a diferença é a pergunta.** Loja oficial × vendedor autônomo virou generalização de atores no meu diagrama e enumeração `TipoVendedor` no Diagrama de Classes do Pedro; `Atendimento` é ator fora do sistema no meu Diagrama de Casos de Uso e raia da plataforma no meu Diagrama de Atividades. O que a subequipe precisa não é convergência entre os seis diagramas — é o critério de cada divergência escrito onde ela aparece.
+
+**Formalizar obriga a inventar.** Um Rich Picture pode parar em "resposta ou reembolso"; um diagrama de atividades não deixa o vendedor calado sem consequência. A regra do reembolso por prazo esgotado é minha, não da observação, e está marcada como inferida em três lugares — na nota dentro do SVG, na decisão 4 e na tabela de rastreabilidade. Declarar a dívida custou menos do que escondê-la.
+
+**Diagrama de casos de uso não é checklist de requisitos.** Conferindo um a um, RF-A06 — sugerir termos alternativos quando a busca não retorna nada — ficou sem elipse, porque o estado vazio é resposta dentro de `Buscar produto`. A decisão é defensável, mas o requisito some do índice; anotar isso como limite não resolve o problema, só o deixa visível para quem vier depois.
+
+### Uso da IA generativa
+
+**O que pedi a ela.** Apoio de notação e conferência de consistência sobre os dois diagramas desta entrega, nunca conteúdo: aplicar o critério de estereótipo aos doze relacionamentos do Diagrama de Casos de Uso, redigir as guardas das três decisões do Diagrama de Atividades e cruzar os seis diagramas da subequipe, feitos por três pessoas em paralelo. O que cada um modelaria foi decidido antes, na [reunião de 12/09/2026](/ReunioesAtas/Subequipe1/Ata12_09.md), e não foi pauta de nenhuma consulta.
+
+**Onde ajudou.** Em três frentes. Na regra formal da notação: a semântica de `fork` e `join` — a junção só prossegue quando todos os fluxos de entrada chegaram — é o que sustenta a decisão 2 do Diagrama de Atividades, e não era algo que eu soubesse antes de perguntar. Na consistência entre autores: conferir os cinco rótulos `[status = ...]` do meu diagrama contra a enumeração `StatusReclamacao` do Diagrama de Classes é trabalho mecânico, e é exatamente onde dois diagramas nossos poderiam divergir sem ninguém notar. E como contraditora: quando escrevi que a decisão `respondeu dentro do prazo?` ficava na raia do Vendedor, ela montou o argumento oposto — quem dispara o temporizador é a plataforma — com a mesma força. Não mudei a decisão; o *trade-off* escrito nela existe por causa do contra-argumento.
+
+**Onde exigiu revisão.** O mapeamento de requisito para caso de uso saiu como se fosse um para um, e não é. A primeira versão da minha tabela de montagem dizia "RF-A01 a RF-A06" e "RF-C01 a RF-C04 viraram o pacote Venda"; conferindo contra o desenho, RF-A06 não tem caso de uso e os quatro RF-C sustentam três. As duas linhas foram corrigidas, e a lacuna virou limite declarado na página. O erro não era de notação: era leitura apressada de uma correspondência que soava óbvia.
+
+**Onde exigiu senso crítico.** Ao pedir o fluxo completo de reclamação e mediação, ela devolveu prazo em dias, instância de recurso e etapa de arbitragem. Nenhum dos três tem origem em coisa alguma que a subequipe tenha levantado, e nenhum veio sinalizado como suposição. Só um sobreviveu — o do prazo —, e sobreviveu marcado como inferido; recurso e arbitragem ficaram de fora, porque acrescentar um segundo ciclo inteiro sobre a mesma ausência de evidência é pior do que deixar o diagrama incompleto e dizer que está. O Pedro aponta essa mesma hipótese na seção dele, o que é um bom sinal: a marcação sobreviveu à leitura de outra pessoa.
+
+**O que passei a fazer.** Conferir contra o artefato, e não contra o texto. Cada número das legendas das figuras 6 e 7 foi contado no próprio SVG — sete atores, vinte e um casos de uso, dezesseis associações, doze relacionamentos, dezessete ações, três decisões, dois pares de bifurcação e junção, quatro nós finais —, e um deles estava errado no rascunho, perto o bastante do certo para atravessar uma leitura sem chamar atenção. É a regra que eu levo desta entrega: conferir texto contra texto não é conferir. O SVG, a tabela de regras da Engenharia Reversa e a enumeração do diagrama do colega respondem sim ou não; enquanto a verificação for feita em cima da própria resposta da IA, ela vai concordar consigo mesma.
 
 ---
 
@@ -68,11 +90,6 @@ A principal lição que levo é que a IA pode contribuir para a revisão e o apr
 
 ---
 
-## Pedro Luciano de Azevedo
-
---
-
----
 
 ## Histórico de Versões
 
@@ -80,3 +97,4 @@ A principal lição que levo é que a IA pode contribuir para a revisão e o apr
 | -- | -- | -- | -- | -- |
 | 1.0    | 16/09/2026 | Criação da página; lições aprendidas e senso crítico sobre o uso de IA generativa na modelagem UML | Pedro Luciano de Azevedo | --          |
 | 1.1 | 17/09/2026 | Criação da página e redação do ponto de vista de Patrick Anderson sobre lições aprendidas e uso de IA generativa | Patrick Anderson | -- |
+| 1.2 | 17/09/2026 | Redação do ponto de vista de Guilherme Costa Zanella sobre lições aprendidas e uso de IA generativa na modelagem do Diagrama de Casos de Uso e do Diagrama de Atividades | Guilherme Costa Zanella | -- |
