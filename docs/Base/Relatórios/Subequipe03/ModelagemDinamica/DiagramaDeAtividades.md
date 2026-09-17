@@ -47,6 +47,7 @@ Modela adicionar e remover endereços como uma decisão binária simples, com a 
 
 </div>
 
+Modela as quatro operações do carrinho que não fazem parte do checkout em si: adicionar item, atualizar quantidade, remover item e esvaziar. Usa `switch`/`case` para representar uma única decisão com quatro saídas, dentro de um `repeat` que permite ao cliente editar o carrinho livremente antes de seguir para a compra.
 
 ### Diagrama de gestão de produto e estoque 
 <div style="text-align:center;">
@@ -59,10 +60,14 @@ Modela adicionar e remover endereços como uma decisão binária simples, com a 
 
 </div>
 
+Modela o cadastro de um novo produto pelo vendedor, incluindo a inicialização do estoque associado.
+Cobre aplicar desconto, repor estoque, atualizar estoque e remover produto, via `switch`/`case`. A remoção é o único ramo com uma decisão binária aninhada, pois depende de verificar se o produto tem pedidos em andamento.
+
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
 | 1.0 | 14/09/2026 | Criação da página | José Joaquim da Silva Neto | -- |
 | 1.1 | 17/09/2026 | Adiciona as imagens dos diagramas | José Joaquim da Silva Neto | -- |
+| 1.2 | 17/09/2026 | Adiciona explicação dos diagramas | José Joaquim da Silva Neto | -- |
 
