@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680" style="background:#ffffff; font-family: 'Segoe UI', Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15" />
+    </filter>
+    <filter id="shadow-box" x="-2%" y="-2%" width="106%" height="106%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Cabeçalho / Título do Diagrama -->
+  <rect x="20" y="15" width="960" height="50" rx="6" fill="#1e293b" />
+  <text x="40" y="46" fill="#ffffff" font-size="20" font-weight="bold">Diagrama de Componentes UML — Sistema de Busca (Mercado Livre)</text>
+  <text x="820" y="46" fill="#94a3b8" font-size="13">Subequipe 02 • Notação UML 2.5</text>
+
+  <!-- ==================== CAMADA 1: APRESENTAÇÃO ==================== -->
+  <rect x="30" y="85" width="260" height="560" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4" />
+  <text x="45" y="115" fill="#475569" font-size="14" font-weight="bold" letter-spacing="0.5">CAMADA DE APRESENTAÇÃO</text>
+
+  <!-- Componente: InterfaceBusca -->
+  <g filter="url(#shadow)" transform="translate(50, 240)">
+    <rect width="220" height="150" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <!-- Ícone de Componente UML -->
+    <rect x="180" y="12" width="26" height="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2" />
+    <rect x="175" y="15" width="10" height="4" fill="#ffffff" stroke="#0284c7" stroke-width="1" />
+    <rect x="175" y="22" width="10" height="4" fill="#ffffff" stroke="#0284c7" stroke-width="1" />
+    
+    <text x="20" y="32" fill="#0369a1" font-size="11" font-style="italic">«component»</text>
+    <text x="20" y="55" fill="#0f172a" font-size="16" font-weight="bold">InterfaceBusca</text>
+    <line x1="15" y1="68" x2="205" y2="68" stroke="#e2e8f0" stroke-width="1" />
+    <text x="20" y="90" fill="#334155" font-size="11.5">• Web App (SPA / React)</text>
+    <text x="20" y="110" fill="#334155" font-size="11.5">• Mobile App (iOS / Android)</text>
+    <text x="20" y="130" fill="#334155" font-size="11.5">• Debounce &amp; Autocomplete</text>
+    
+    <!-- Porta de saída -->
+    <rect x="215" y="70" width="10" height="10" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
+  </g>
+
+  <!-- ==================== CAMADA 2: ORQUESTRAÇÃO ==================== -->
+  <rect x="330" y="85" width="290" height="560" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4" />
+  <text x="345" y="115" fill="#475569" font-size="14" font-weight="bold" letter-spacing="0.5">CAMADA DE ORQUESTRAÇÃO</text>
+
+  <!-- Componente: MotorBusca -->
+  <g filter="url(#shadow)" transform="translate(355, 200)">
+    <rect width="240" height="240" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2" />
+    <!-- Ícone de Componente UML -->
+    <rect x="200" y="12" width="26" height="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2" />
+    <rect x="195" y="15" width="10" height="4" fill="#ffffff" stroke="#2563eb" stroke-width="1" />
+    <rect x="195" y="22" width="10" height="4" fill="#ffffff" stroke="#2563eb" stroke-width="1" />
+
+    <text x="20" y="32" fill="#1d4ed8" font-size="11" font-style="italic">«component»</text>
+    <text x="20" y="55" fill="#0f172a" font-size="16" font-weight="bold">MotorBusca</text>
+    <text x="20" y="70" fill="#64748b" font-size="11">(Search Orchestrator)</text>
+    <line x1="15" y1="80" x2="225" y2="80" stroke="#e2e8f0" stroke-width="1" />
+    <text x="20" y="102" fill="#334155" font-size="11.5">• Tratamento de Query</text>
+    <text x="20" y="122" fill="#334155" font-size="11.5">• Orquestração Concorrente</text>
+    <text x="20" y="142" fill="#334155" font-size="11.5">• Circuit Breaker (Resiliência)</text>
+    <text x="20" y="162" fill="#334155" font-size="11.5">• Mesclagem de Resultados</text>
+    <text x="20" y="182" fill="#334155" font-size="11.5">• Paginação e Facetas</text>
+
+    <!-- Porta de entrada esquerda -->
+    <rect x="-5" y="110" width="10" height="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+    <!-- Portas de saída direita -->
+    <rect x="235" y="30" width="10" height="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+    <rect x="235" y="85" width="10" height="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+    <rect x="235" y="145" width="10" height="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+    <rect x="235" y="200" width="10" height="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+  </g>
+
+  <!-- ==================== CAMADA 3: SERVIÇOS & DADOS ==================== -->
+  <rect x="660" y="85" width="315" height="560" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4" />
+  <text x="675" y="115" fill="#475569" font-size="14" font-weight="bold" letter-spacing="0.5">DADOS &amp; SERVIÇOS DE DOMÍNIO</text>
+
+  <!-- Componente: CacheBusca -->
+  <g filter="url(#shadow)" transform="translate(685, 130)">
+    <rect width="265" height="95" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.8" />
+    <rect x="225" y="12" width="26" height="18" fill="#fef3c7" stroke="#d97706" stroke-width="1.2" />
+    <rect x="220" y="15" width="10" height="4" fill="#ffffff" stroke="#d97706" stroke-width="1" />
+    <rect x="220" y="22" width="10" height="4" fill="#ffffff" stroke="#d97706" stroke-width="1" />
+    <text x="15" y="28" fill="#b45309" font-size="11" font-style="italic">«component»</text>
+    <text x="15" y="48" fill="#0f172a" font-size="15" font-weight="bold">CacheBusca (Redis)</text>
+    <text x="15" y="70" fill="#475569" font-size="11">• Cache de consultas quentes</text>
+    <text x="15" y="85" fill="#475569" font-size="11">• TTL reduzido / Invalidação via CDC</text>
+    <rect x="-5" y="40" width="10" height="10" fill="#ffffff" stroke="#d97706" stroke-width="1.5" />
+  </g>
+
+  <!-- Componente: IndiceBusca -->
+  <g filter="url(#shadow)" transform="translate(685, 245)">
+    <rect width="265" height="105" rx="6" fill="#ffffff" stroke="#059669" stroke-width="1.8" />
+    <rect x="225" y="12" width="26" height="18" fill="#d1fae5" stroke="#059669" stroke-width="1.2" />
+    <rect x="220" y="15" width="10" height="4" fill="#ffffff" stroke="#059669" stroke-width="1" />
+    <rect x="220" y="22" width="10" height="4" fill="#ffffff" stroke="#059669" stroke-width="1" />
+    <text x="15" y="28" fill="#047857" font-size="11" font-style="italic">«component»</text>
+    <text x="15" y="48" fill="#0f172a" font-size="15" font-weight="bold">IndiceBusca (Elasticsearch)</text>
+    <text x="15" y="70" fill="#475569" font-size="11">• Índice invertido de produtos</text>
+    <text x="15" y="85" fill="#475569" font-size="11">• Busca textual &amp; fuzzy matching</text>
+    <text x="15" y="100" fill="#475569" font-size="11">• Agregações facetadas (filtros)</text>
+    <rect x="-5" y="45" width="10" height="10" fill="#ffffff" stroke="#059669" stroke-width="1.5" />
+  </g>
+
+  <!-- Componente: ServicoRanqueamento -->
+  <g filter="url(#shadow)" transform="translate(685, 370)">
+    <rect width="265" height="105" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" />
+    <rect x="225" y="12" width="26" height="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2" />
+    <rect x="220" y="15" width="10" height="4" fill="#ffffff" stroke="#7c3aed" stroke-width="1" />
+    <rect x="220" y="22" width="10" height="4" fill="#ffffff" stroke="#7c3aed" stroke-width="1" />
+    <text x="15" y="28" fill="#6d28d9" font-size="11" font-style="italic">«component»</text>
+    <text x="15" y="48" fill="#0f172a" font-size="15" font-weight="bold">ServicoRanqueamento</text>
+    <text x="15" y="70" fill="#475569" font-size="11">• Score de relevância &amp; ML</text>
+    <text x="15" y="85" fill="#475569" font-size="11">• Pontuação por Envio FULL</text>
+    <text x="15" y="100" fill="#475569" font-size="11">• Termômetro e Reputação do Vendedor</text>
+    <rect x="-5" y="45" width="10" height="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" />
+  </g>
+
+  <!-- Componente: ServicoAnuncios -->
+  <g filter="url(#shadow)" transform="translate(685, 495)">
+    <rect width="265" height="105" rx="6" fill="#ffffff" stroke="#e11d48" stroke-width="1.8" />
+    <rect x="225" y="12" width="26" height="18" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.2" />
+    <rect x="220" y="15" width="10" height="4" fill="#ffffff" stroke="#e11d48" stroke-width="1" />
+    <rect x="220" y="22" width="10" height="4" fill="#ffffff" stroke="#e11d48" stroke-width="1" />
+    <text x="15" y="28" fill="#be123c" font-size="11" font-style="italic">«component»</text>
+    <text x="15" y="48" fill="#0f172a" font-size="15" font-weight="bold">ServicoAnuncios (Mercado Ads)</text>
+    <text x="15" y="70" fill="#475569" font-size="11">• Leilão de Palavras-chave (RTB)</text>
+    <text x="15" y="85" fill="#475569" font-size="11">• Produtos Patrocinados</text>
+    <text x="15" y="100" fill="#475569" font-size="11">• Campanha &amp; Orçamento de Ads</text>
+    <rect x="-5" y="45" width="10" height="10" fill="#ffffff" stroke="#e11d48" stroke-width="1.5" />
+  </g>
+
+  <!-- ==================== INTERFACES (LOLLIPOP & SOCKET) ==================== -->
+  
+  <!-- Conexão 1: InterfaceBusca -> MotorBusca (ISearchAPI) -->
+  <g>
+    <line x1="275" y1="315" x2="310" y2="315" stroke="#0284c7" stroke-width="2" />
+    <path d="M 312 305 A 10 10 0 0 1 312 325" fill="none" stroke="#0284c7" stroke-width="2.5" />
+    
+    <line x1="350" y1="315" x2="320" y2="315" stroke="#2563eb" stroke-width="2" />
+    <circle cx="320" cy="315" r="5" fill="#ffffff" stroke="#2563eb" stroke-width="2" />
+
+    <text x="270" y="295" fill="#1e293b" font-size="12" font-weight="bold">ISearchAPI</text>
+    <text x="260" y="340" fill="#64748b" font-size="10.5">«interface» REST/JSON</text>
+  </g>
+
+  <!-- Conexão 2: MotorBusca -> CacheBusca (ICacheService) -->
+  <g>
+    <path d="M 600 235 L 635 235 L 635 175 L 642 175" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4" />
+    <path d="M 643 166 A 9 9 0 0 1 643 184" fill="none" stroke="#2563eb" stroke-width="2" />
+    <line x1="680" y1="175" x2="650" y2="175" stroke="#d97706" stroke-width="1.8" />
+    <circle cx="650" cy="175" r="4.5" fill="#ffffff" stroke="#d97706" stroke-width="2" />
+    <text x="565" y="165" fill="#b45309" font-size="11" font-weight="bold">ICacheService</text>
+  </g>
+
+  <!-- Conexão 3: MotorBusca -> IndiceBusca (IQueryEngine) -->
+  <g>
+    <line x1="600" y1="290" x2="642" y2="290" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4" />
+    <path d="M 643 281 A 9 9 0 0 1 643 299" fill="none" stroke="#2563eb" stroke-width="2" />
+    <line x1="680" y1="290" x2="650" y2="290" stroke="#059669" stroke-width="1.8" />
+    <circle cx="650" cy="290" r="4.5" fill="#ffffff" stroke="#059669" stroke-width="2" />
+    <text x="565" y="280" fill="#047857" font-size="11" font-weight="bold">IQueryEngine</text>
+  </g>
+
+  <!-- Conexão 4: MotorBusca -> ServicoRanqueamento (IRankingService) -->
+  <g>
+    <path d="M 600 350 L 635 350 L 635 415 L 642 415" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4" />
+    <path d="M 643 406 A 9 9 0 0 1 643 424" fill="none" stroke="#2563eb" stroke-width="2" />
+    <line x1="680" y1="415" x2="650" y2="415" stroke="#7c3aed" stroke-width="1.8" />
+    <circle cx="650" cy="415" r="4.5" fill="#ffffff" stroke="#7c3aed" stroke-width="2" />
+    <text x="555" y="405" fill="#6d28d9" font-size="11" font-weight="bold">IRankingService</text>
+  </g>
+
+  <!-- Conexão 5: MotorBusca -> ServicoAnuncios (IAdsAuction) -->
+  <g>
+    <path d="M 600 405 L 625 405 L 625 540 L 642 540" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4" />
+    <path d="M 643 531 A 9 9 0 0 1 643 549" fill="none" stroke="#2563eb" stroke-width="2" />
+    <line x1="680" y1="540" x2="650" y2="540" stroke="#e11d48" stroke-width="1.8" />
+    <circle cx="650" cy="540" r="4.5" fill="#ffffff" stroke="#e11d48" stroke-width="2" />
+    <text x="565" y="530" fill="#be123c" font-size="11" font-weight="bold">IAdsAuction</text>
+  </g>
+
+  <!-- Legenda UML -->
+  <g transform="translate(30, 650)">
+    <circle cx="10" cy="8" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2" />
+    <text x="20" y="12" fill="#64748b" font-size="11">Interface Fornecida (Lollipop)</text>
+    <path d="M 180 3 A 6 6 0 0 1 180 13" fill="none" stroke="#2563eb" stroke-width="2" />
+    <text x="195" y="12" fill="#64748b" font-size="11">Interface Requerida (Soquete)</text>
+    <rect x="370" y="4" width="8" height="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+    <text x="385" y="12" fill="#64748b" font-size="11">Porta UML</text>
+    <rect x="470" y="3" width="14" height="10" fill="#f8fafc" stroke="#2563eb" stroke-width="1" />
+    <text x="492" y="12" fill="#64748b" font-size="11">Componente com estereótipo «component»</text>
+  </g>
+</svg>
