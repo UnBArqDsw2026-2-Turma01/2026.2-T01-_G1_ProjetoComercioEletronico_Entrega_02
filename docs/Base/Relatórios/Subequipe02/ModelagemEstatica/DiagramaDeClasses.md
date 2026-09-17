@@ -12,32 +12,32 @@
 
 ## 1. Introdução
 
-Este diagrama modela a estrutura estática do domínio de **busca de produtos**, operacionalizando as regras de negócio identificadas durante a fase de [Engenharia Reversa e BPMN](/Base/Relatórios/Subequipe02/ArtefatoGeneralista.md). Diferentemente do diagrama de sequência (que ilustrará a troca de mensagens no tempo), este artefato define a espinha dorsal do sistema, estabelecendo o que cada entidade conhece (atributos) e o que cada uma faz (métodos).
+Este diagrama modela a estrutura estática do domínio de **busca de produtos**, dando forma às regras de negócio identificadas na fase de [Engenharia Reversa e BPMN](/Base/Relatórios/Subequipe02/ArtefatoGeneralista.md). Diferentemente do [Diagrama de Sequência](/Base/Relatórios/Subequipe02/DiagramaDeSequencia.md), que descreve a troca de mensagens ao longo do tempo, este artefato define a espinha dorsal do sistema: o que cada entidade conhece (atributos) e o que cada uma faz (métodos). As classes e métodos aqui definidos são a base estrutural sobre a qual o diagrama de sequência opera.
 
 ## 2. Entidades Principais
 
 | Classe | Descrição |
 |---|---|
 | **Busca** | Centraliza o contexto da requisição feita pelo usuário, armazenando o termo digitado, a ordenação selecionada e gerenciando a aplicação de filtros. |
-| **ResultadoBusca** | Representa o pacote de dados devolvido pelo servidor, isolando o controle de paginação, tempo de resposta e a coleção de itens encontrados. |
-| **Produto** | Entidade central do catálogo, contendo as características do anúncio (preço, estoque, tipo de frete) exibidas na interface de resultados. |
-| **Filtro (Abstrata)** | Superclasse que define o contrato base para afunilamento de resultados, garantindo polimorfismo na aplicação de regras de negócio. |
-| **Usuario** | Ator que interage com o sistema, mantendo estado sobre suas preferências e disparando o fluxo principal. |
+| **ResultadoBusca** | Representa o pacote de dados devolvido pelo servidor, isolando o controle de paginação, o tempo de resposta e a coleção de itens encontrados. |
+| **Produto** | Entidade central do catálogo, reunindo as características do anúncio (preço, estoque, tipo de frete) exibidas na interface de resultados. |
+| **Filtro (Abstrata)** | Superclasse que define o contrato base para o afunilamento de resultados, garantindo polimorfismo na aplicação das regras de negócio. |
+| **Usuario** | Ator que interage com o sistema, mantendo suas preferências e disparando o fluxo principal. |
 
 ## 3. Relacionamentos e Senso Crítico (Decisões de Design)
 
-- **Separação de Contexto e Payload:** A entidade `Busca` foi deliberadamente separada de `ResultadoBusca`. No sistema real, a requisição (o que o usuário quer) possui um ciclo de vida e responsabilidades diferentes da resposta (o que o servidor paginou e devolveu). Isso garante alta coesão estrutural.
-- **Associação vs. Atributos Redundantes:** Em estrita observância à notação UML canônica, atributos tipados como coleções (ex: `List<Produto>`) foram suprimidos de dentro das caixas das classes, sendo substituídos pelas linhas de associação correspondentes com multiplicidade `*`.
-- **Agregação (`o--`):** Utilizada entre `Busca` e `Filtro`, bem como entre `ResultadoBusca` e `Produto`. O losango vazado indica uma relação "todo-parte" sem dependência existencial obrigatória (ou seja, um `Produto` continua existindo no banco de dados independentemente de a busca ter sido encerrada ou destruída).
-- **Generalização (`<|--`):** As derivações de `Filtro` (`FiltroPreco`, `FiltroFrete`, `FiltroMarca`) utilizam herança, permitindo que a classe `Busca` aplique múltiplas restrições diferentes utilizando a mesma assinatura abstrata do método `aplicar()`.
+- **Separação de contexto e payload:** a entidade `Busca` foi deliberadamente separada de `ResultadoBusca`. No sistema real, a requisição (o que o usuário quer) tem ciclo de vida e responsabilidades diferentes da resposta (o que o servidor paginou e devolveu) — separação que garante alta coesão estrutural.
+- **Associação em vez de atributos redundantes:** em observância estrita à notação UML canônica, atributos tipados como coleções (por exemplo, `List<Produto>`) foram removidos de dentro das caixas das classes e substituídos pelas linhas de associação correspondentes, com multiplicidade `*`.
+- **Agregação (`o--`):** usada entre `Busca` e `Filtro`, e também entre `ResultadoBusca` e `Produto`. O losango vazado indica uma relação "todo-parte" sem dependência existencial obrigatória — um `Produto`, por exemplo, continua existindo no banco de dados independentemente de a busca que o retornou ter sido encerrada ou destruída.
+- **Generalização (`<|--`):** as derivações de `Filtro` (`FiltroPreco`, `FiltroFrete`, `FiltroMarca`) usam herança, permitindo que a classe `Busca` aplique diferentes restrições reutilizando a mesma assinatura abstrata do método `aplicar()`.
 
-## 4. Notação utilizada
+## 4. Notação Utilizada
 
-Classes representadas como retângulos divididos em três compartimentos (nome, atributos e métodos). Visibilidade demarcada formalmente (`+` público, `-` privado, `#` protegido). Enumerações utilizadas para agrupar domínios de valores primitivos (como `Ordenacao` e `TipoFrete`), limpando o núcleo do diagrama. Relacionamentos expressos através de associações direcionadas, agregações e generalizações da UML clássica.
+As classes são representadas como retângulos divididos em três compartimentos (nome, atributos e métodos), com visibilidade demarcada formalmente (`+` público, `-` privado, `#` protegido). Enumerações agrupam domínios de valores primitivos, como `Ordenacao` e `TipoFrete`, mantendo o núcleo do diagrama limpo. Os relacionamentos são expressos por associações direcionadas, agregações e generalizações da UML clássica.
 
 ## Embasamento na literatura
 
-A escolha por omitir coleções de dentro da listagem de atributos e representá-las exclusivamente através de associações diretas e multiplicidade é fundamentada nas diretrizes de Larman (2004) para a transição de um Modelo de Domínio para um Diagrama de Classes de Projeto. Segundo o autor, a visibilidade e a navegabilidade em projetos orientados a objetos devem ser documentadas primariamente pelas conexões entre as classes, evitando redundâncias que poluem a abstração estrutural do sistema.
+A escolha de omitir coleções da listagem de atributos e representá-las exclusivamente por associações diretas com multiplicidade segue as diretrizes de Larman (2004) para a transição de um Modelo de Domínio a um Diagrama de Classes de Projeto. Segundo o autor, visibilidade e navegabilidade em projetos orientados a objetos devem ser documentadas primariamente pelas conexões entre as classes, evitando redundâncias que poluem a abstração estrutural do sistema.
 
 ### Referências
 
