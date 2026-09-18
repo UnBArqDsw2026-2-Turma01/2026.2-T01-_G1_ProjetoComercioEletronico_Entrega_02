@@ -8,7 +8,18 @@ Este documento apresenta as **lições aprendidas** e o **uso de Inteligência A
 
 ### Lições aprendidas
 
+Ao desenvolver o diagrama de máquina de estados do processo de autenticação (login), o principal aprendizado foi entender que a granularidade de um diagrama de estados não é uma escolha arbitrária: ela decorre de um critério formal, segundo o qual um novo estado só se justifica quando o sistema passa a responder de forma distinta a eventos futuros a partir dele. Isso me levou a abandonar uma primeira versão mais simples, que tratava o login como praticamente dois estados ("autenticando" e "autenticado"), e separar em situações que, apesar de parecerem equivalentes do ponto de vista do usuário, escondiam tratamentos de erro e transições diferentes entre si.
+
+Também aprendi na prática a diferença entre um auto-laço de repetição e um pseudo-estado de escolha: os dois podem representar "tentar de novo em caso de erro", mas o pseudo-estado de escolha separa conceitualmente a ação (verificar as credenciais) da decisão sobre o resultado dessa ação, o que deixa o diagrama mais fiel à semântica de decisão da UML em vez de sobrecarregar um único estado com duas responsabilidades distintas.
+
+Por fim, ficou evidente como a modelagem dinâmica ganha rigor quando ancorada em um comportamento real e documentado, no caso, o fluxo OAuth 2.0 do Mercado Livre, em vez de estados genéricos inventados. Além de tornar o diagrama mais crível, essa escolha manteve a modelagem dinâmica consistente com o diagrama estático de componentes já construído, já que as mesmas operações aparecem nos dois artefatos.
+
 ### Uso de IA Generativa
+Utilizei a IA principalmente como apoio à pesquisa teórica e à revisão crítica das decisões de modelagem, não para gerar o diagrama pronto. Antes de definir os estados, pedi à IA que explicasse o formalismo original de statecharts de Harel (1987) e como a UML o incorporou, o que me ajudou a justificar por que sete estados, e não dois ou três, eram necessários para representar o login com fidelidade comportamental.
+
+Também usei a IA para colocar lado a lado alternativas de modelagem antes de decidir entre elas, por exemplo, comparar um auto-laço de repetição com um pseudo-estado de escolha para representar a repetição da verificação de credenciais, e para separar, em cada decisão do relatório, o que era justificativa conceitual do que era apenas resolução de um problema prático de legibilidade na ferramenta de diagramação usada. Isso me obrigou a registrar os trade-offs de cada escolha, em vez de apresentar uma única alternativa como se fosse a única tecnicamente correta.
+
+Por fim, recorri à IA para revisar a estrutura do relatório técnico (organização em decisão, justificativa crítica e trade-off reconhecido para cada seção) e para conferir a formatação em Markdown, mantendo o documento consistente com o padrão adotado pelo restante da subequipe.
 
 ---
 
@@ -77,3 +88,4 @@ Além da modelagem UML, utilizei a IA para tirar dúvidas e aprimorar a sintaxe 
 | 1.1 | 15/09/2026 | Adiciona evidências do uso de ia | José Joaquim da Silva Neto | -- |
 | 1.2 | 17/09/2026 | Adiciona lições aprendidas e uso de IA| Pedro Henrique Gomes | -- |
 | 1.3 | 18/09/2026 | Adiciona lições aprendidas | José Joaquim da Silva Neto | -- |
+| 1.4 | 18/09/2026 | Adiciona Lições aprendidas e IA | João Paulo Barbosa Pereira Nunes | -- |
