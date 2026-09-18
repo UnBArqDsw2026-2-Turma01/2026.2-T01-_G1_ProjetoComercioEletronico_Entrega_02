@@ -90,8 +90,8 @@ Lista priorizada de todos os diagramas e entregáveis do projeto. Serve como fon
 | 4 | Diagrama de Componentes | Estático | Média |
 | 5 | Diagrama de Pacotes | Estático | Baixa |
 | 6 | Diagrama de Casos de Uso | Dinâmico | Alta |
-| 7 | Diagrama de Sequência | Dinâmico | Alta |
-| 8 | Diagrama de Atividades | Dinâmico | Média |
+| 7 | Diagrama de Sequência | Dinâmico | Baixa |
+| 8 | Diagrama de Atividades | Dinâmico |  Alta |
 | 9 | Diagrama de Máquina de Estados | Dinâmico | Média |
 | 10 | Revisão geral e consolidação | Transversal | Alta |
 
@@ -158,6 +158,8 @@ O Scrum, em sua forma originalmente descrita no *Scrum Guide*, é pensado para e
 Essas adaptações preservam o espírito do framework — iteração, transparência e inspeção/adaptação contínua — sem impor overhead desnecessário a um projeto de escopo e prazo reduzidos.
 
 ---
+<a id="definiçãodepronto"></a>
+
 
 ## 8. Definição de Pronto (Definition of Done)
 
@@ -209,3 +211,4 @@ Um item do backlog é considerado concluído (Done) quando atende a todos os cri
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
 | 1.0 | 04/09/2026 | Definição da metodologia | José Joaquim da Silva Neto | João Paulo Barbosa Pereira Nunes, Júlia Santana Campos e Pedro Henrique Gomes |
+| 1.1 | 18/09/2026 | Adiciona âncora para elo de rastreabilidade que relaciona a seção 8 desse documento com os registros de rastreabilidade da metodologia | José Joaquim da Silva Neto | -- |
