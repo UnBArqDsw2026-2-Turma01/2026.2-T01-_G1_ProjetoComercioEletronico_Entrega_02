@@ -44,7 +44,7 @@ O critério de "Pronto" referenciado nesta tabela é o definido na seção 6 da 
 
 | Papel | Integrante(s) responsável(is) | Evidência de exercício do papel |
 |---|---|---|
-| Pessoa A — Modelagem Estática (Diagrama de Classes) e Modelagem Dinâmica (Diagrama de Sequência) | Julia Oliveira Patricio | [Diagrama de Classes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeClasses.md) · [Diagrama de Sequência](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeSequencia.md) · [Relato de IA Generativa](/Base/Relatórios/Subequipe02/IAGenerativa.md) |
+|Modelagem Estática (Diagrama de Classes) e Modelagem Dinâmica (Diagrama de Sequência) | Julia Oliveira Patricio | [Diagrama de Classes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeClasses.md) · [Diagrama de Sequência](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeSequencia.md) · [Relato de IA Generativa](/Base/Relatórios/Subequipe02/IAGenerativa.md) |
 | Modelagem Estática (Diagrama de Componentes) e Modelagem Dinâmica (Diagrama de Atividades) | Guilherme D'Avila | [Diagrama de Componentes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeComponentes.md) · [Diagrama de Atividades](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeAtividades.md) · [Relato de IA Generativa](/Base/Relatórios/Subequipe02/IAGenerativa.md) |
 | Modelagem Estática (Diagrama de Casos de Uso) e Modelagem Dinâmica (Diagrama de Máquina de Estados) | Maria Clara | [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeCasosDeUso.md) · [Diagrama de Máquina de Estados](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) · [Relato de IA Generativa](/Base/Relatórios/Subequipe02/IAGenerativa.md) |
 

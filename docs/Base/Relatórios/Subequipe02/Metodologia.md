@@ -65,9 +65,9 @@ Um "incremento" neste ciclo de trabalho foi definido como um diagrama UML (está
 ## 5. Eventos
 
 A comunicação assíncrona substituiu os ritos tradicionais longos para conferir celeridade à entrega:
-- **Planeamento (Terça-feira):** Reunião online via meet para o sorteio das atribuições (Pessoa A, B e C), alinhamento de escopo (seção de busca).
-- **Check-ins Contínuos (Terça a Quinta):** Troca de mensagens no WhatsApp reportando impedimentos, validando decisões de design (ex: aplicação do padrão MVC) e partilhando versões de rascunho dos diagramas.
-- **Review e Integração (Quinta-feira/Hoje):** Revisão técnica mútua dos diagramas finalizados, validação da rastreabilidade entre modelos estáticos e dinâmicos, e submissão (commits) na *branch* correspondente para publicação.
+- **Planejamento:** Reunião online via meet para o sorteio das atribuições, alinhamento de escopo (seção de busca).
+- **Check-ins Contínuos:** Troca de mensagens no WhatsApp reportando impedimentos, validando decisões de design (ex: aplicação do padrão MVC) e partilhando versões de rascunho dos diagramas.
+- **Review e Integração:** Revisão técnica mútua dos diagramas finalizados, validação da rastreabilidade entre modelos estáticos e dinâmicos, e submissão (commits) na *branch* correspondente para publicação.
 
 ---
 
@@ -84,9 +84,9 @@ Um diagrama do backlog é considerado concluído (Pronto) quando atende a todos 
 ## 7. Cronograma
 
 A execução das tarefas foi concentrada num ciclo intensivo de três dias:
-- **Terça-feira:** Definição da divisão do trabalho (sorteio). Início do desenvolvimento da Modelagem Estática (Classes, Casos de Uso, Componentes).
-- **Quarta-feira:** Fecho da Modelagem Estática e transição para o desenvolvimento da Modelagem Dinâmica (Sequência, Atividades, Estados), assegurando que o dinâmico refletisse a estrutura concebida no dia anterior.
-- **Quinta-feira (Hoje):** Refinamentos finais, correções de acoplamento (arquitetura MVC), elaboração das documentações Markdown de suporte, preenchimento da matriz de rastreabilidade e commits finais no repositório.
+- **Terça-feira (15/09/2026):** Definição da divisão do trabalho (sorteio). Início do desenvolvimento da Modelagem Estática (Classes, Casos de Uso, Componentes).
+- **Quarta-feira (16/09/2026):** Fecho da Modelagem Estática e transição para o desenvolvimento da Modelagem Dinâmica (Sequência, Atividades, Estados), assegurando que o dinâmico refletisse a estrutura concebida no dia anterior.
+- **Quinta-feira (17/09/2026):** Refinamentos finais, correções de acoplamento (arquitetura MVC), elaboração das documentações Markdown de suporte, preenchimento da matriz de rastreabilidade e commits finais no repositório.
 
 ---
 
@@ -94,7 +94,8 @@ A execução das tarefas foi concentrada num ciclo intensivo de três dias:
 
 | Ferramenta | Finalidade |
 |---|---|
-| **WhatsApp** | Coordenação da equipa, planeamento ágil, sorteio de tarefas e check-ins diários assíncronos. |
+| **WhatsApp** | Coordenação da equipe, planejamento ágil e check-ins diários assíncronos. |
+| **Google Meet** | Coordenação da equipe, planejamento ágil, sorteio de tarefas. |
 | **Draw.io / PlantUML** | Prototipagem, modelagem rigorosa e renderização dos diagramas UML estáticos e dinâmicos. |
 | **Visual Studio Code (VS Code)** | Edição local dos ficheiros Markdown, visualização da árvore de diretórios e pre-visualização local. |
 | **Git / GitHub** | Versionamento dos artefatos, registo de coautorias e gestão de configuração do projeto. |
