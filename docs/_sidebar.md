@@ -30,6 +30,17 @@
             - [Diagrama de Máquina de Estados](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md)
             - [Diagrama de Atividades](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeAtividades.md)
       - [1.1.2. SubEquipe_02](/Base/Relatórios/1.1.2.SubEquipe_02.md)
+        - [Metodologia](/Base/Relatórios/Subequipe02/Metodologia.md)
+        - [Rastreabilidade da Metodologia](/Base/Relatórios/Subequipe02/RastreabilidadeMetodologia.md)
+        - [Uso de IA generativa e lições aprendidas](/Base/Relatórios/Subequipe02/IAGenerativa.md)
+        - Modelagem Estática
+            - [Diagrama de Classes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeClasses.md)
+            - [Diagrama de Componentes](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeComponentes.md)
+            - [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe02/ModelagemEstatica/DiagramaDeCasosDeUso.md)
+        - Modelagem Dinâmica
+            - [Diagrama de Sequência](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeSequencia.md)
+            - [Diagrama de Atividades](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeAtividades.md)
+            - [Diagrama de Estados](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md)
       - 1.1.3. SubEquipe_03
         - [Metodologia](/Base/Relatórios/Subequipe03/Metodologia.md)
         - [Rastreabilidade da Metodologia](/Base/Relatórios/Subequipe03/RastreabilidadeMetodologia.md)
@@ -46,7 +57,7 @@
             - [Diagrama de Estados](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md)
   - [1.2. Participações - Modelagem](/Base/1.2.ParticipacoesModelagem.md)
     - [1.2.1 SubEquipe01](/Base/Participacoes/ParticipacoesSubequipe1.md)
-    - [1.2.2 SubEquipe02]()
+    - [1.2.2 SubEquipe02](/Base/Participacoes/ParticipacoesSubequipe2.md)
     - [1.2.3 SubEquipe03](/Base/Participacoes/ParticipacoesSubequipe3.md)
 
   - [1.3. Iniciativas Extras - Modelagem](/Base/1.3.IniciativasExtras.md)
