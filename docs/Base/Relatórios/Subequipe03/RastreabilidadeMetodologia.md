@@ -42,16 +42,16 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 | # | Item do backlog | Sprint | Responsável | Data de conclusão | Evidência (arquivo/commit) | Critério de Pronto atendido? | Status |
 |---|---|---|---|---|---|---|---|
-| 1 | Levantamento de entidades e atores do domínio | 1 | TODOS| | Documentação realizada na entrega 1 a partir da engenharia reversa| <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 1 | Levantamento de entidades e atores do domínio | 1 | TODOS| Entrega 1| Documentação realizada na entrega 1 a partir da engenharia reversa| <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 2 | Diagrama de Classes | 1 | José Joaquim | 11/09/26 | [Diagrama de Classes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeClasses.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 3 | Diagrama de Implantação | 1 | Pedro Henrique | | [Diagrama de Implantação](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeImplantacao.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 4 | Diagrama de Componentes | 1 | João Paulo | | [Diagrama de Componentes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeComponentes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 3 | Diagrama de Implantação | 1 | Pedro Henrique | 15/09/26 | [Diagrama de Implantação](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeImplantacao.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 4 | Diagrama de Componentes | 1 | João Paulo | 17/09/26 | [Diagrama de Componentes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeComponentes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 5 | Diagrama de Pacotes | 1 | José Joaquim | 13/09/26 | [Diagrama de Pacotes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDePacotes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | | [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeCasosDeUso.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | 18/09/26 | [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeCasosDeUso.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 7 | Diagrama de Sequência | 2 | TODOS| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 8 | Diagrama de Atividades | 2 | José Joaquim e Pedro Henrique| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 9 | Diagrama de Máquina de Estados | 2 | João Paulo e Júlia Campos| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 10 | Revisão geral e consolidação | 2 | TODOS | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 8 | Diagrama de Atividades | 2 | José Joaquim e Pedro Henrique| 17/09/26 | [Diagrama de Atividades](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeAtividades.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 9 | Diagrama de Máquina de Estados | 2 | João Paulo e Júlia Campos| 17/09/26 | [Diagrama de Máquina de Estados](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 10 | Revisão geral e consolidação | 2 | TODOS | 17/09/26 | | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 
 O critério de "Pronto" referenciado nesta tabela é o definido na seção 8 da documentação da metodologia (revisão por outro integrante, consistência entre diagramas, versionamento e notação UML padrão).
 
@@ -119,3 +119,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 2.2 | 15/09/2026 | Adiciona divergência na prática da metodologia durante as Dailys check-in do dia 05/09/2026 até 07/09/2026 | José Joaquim da Silva Neto | -- |
 | 2.3 | 15/09/2026 | Adiciona papéis exercidos durante as práticas da metodologia | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 2.4 | 16/09/2026 | Adiciona check in de participação diária do dia 16/09/26 | José Joaquim da Silva Neto | -- |
+| 2.5 | 18/09/2026 | Atualiza matriz de rastreabilidade | José Joaquim da Silva Neto | -- |
