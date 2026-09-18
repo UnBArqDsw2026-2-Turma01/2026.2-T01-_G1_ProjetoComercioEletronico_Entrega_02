@@ -53,7 +53,11 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | 9 | Diagrama de Máquina de Estados | 2 | João Paulo e Júlia Campos| 17/09/26 | [Diagrama de Máquina de Estados](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 10 | Revisão geral e consolidação | 2 | TODOS | 17/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata17_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao17_09.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 
-O critério de "Pronto" referenciado nesta tabela é o definido na seção 8 da documentação da metodologia (revisão por outro integrante, consistência entre diagramas, versionamento e notação UML padrão).
+O critério de "Pronto" referenciado nesta tabela é o definido na seção 8 da documentação da metodologia (revisão por outro integrante, consistência entre diagramas, versionamento e notação UML padrão). [Clique aqui para acessar a seção do 8 do documento de definição da metodologia!](/Base/Relatórios/Subequipe03/Metodologia.md#definiçãodepronto).
+
+Vale a pena ressaltar que a revisão dos outros membros foram realizadas também durante as reuniões:
+
+[Gravação da reunião 11/09/26](/ReunioesAtas/Subequipe3/Gravacao11_09.md) <br> [Gravação da reunião 17/09/26](/ReunioesAtas/Subequipe3/Gravacao17_09.md)
 
 ---
 
@@ -61,8 +65,8 @@ O critério de "Pronto" referenciado nesta tabela é o definido na seção 8 da 
 
 | Papel (Scrum) | Integrante(s) responsável(is) | Evidência de exercício do papel |
 |---|---|---|
-| Product Owner | Pedro Henrique Gomes | *(ex: registros de priorização do backlog)* |
-| Scrum Master | José Joaquim da Silva Neto| *(ex: atas das reuniões conduzidas)* |
+| Product Owner | Pedro Henrique Gomes | Os registros de versionamento das páginas e as reuniões evidenciam o exercício do papel. <br> [Gravação da reunião 04/09/26](/ReunioesAtas/Subequipe3/Gravacao04_09.md) <br> [Gravação da reunião 11/09/26](/ReunioesAtas/Subequipe3/Gravacao11_09.md) <br> [Gravação da reunião 17/09/26](/ReunioesAtas/Subequipe3/Gravacao17_09.md)|
+| Scrum Master | José Joaquim da Silva Neto| Os registros de versionamento das páginas e as reuniões evidenciam o exercício do papel. <br> [Gravação da reunião 04/09/26](/ReunioesAtas/Subequipe3/Gravacao04_09.md) <br> [Gravação da reunião 11/09/26](/ReunioesAtas/Subequipe3/Gravacao11_09.md) <br> [Gravação da reunião 17/09/26](/ReunioesAtas/Subequipe3/Gravacao17_09.md) |
 | Development Team | TODOS | As evidências podem ser encontradas em [Matriz de rastreabilidade](#matriz) |
 
 > Não aconteceu papéis rotativos entre Sprints.
@@ -121,3 +125,5 @@ A metodologia adotada nessa entrega teve um excelente resultado. Conforme regist
 | 2.4 | 16/09/2026 | Adiciona check in de participação diária do dia 16/09/26 | José Joaquim da Silva Neto | -- |
 | 2.5 | 18/09/2026 | Atualiza matriz de rastreabilidade | José Joaquim da Silva Neto | -- |
 | 2.6 | 18/09/2026 | Atualiza matriz de rastreabilidade com elo para a reunião final | José Joaquim da Silva Neto | -- |
+| 2.7 | 18/09/2026 | Adiciona elo de rastreabilidade para a definição de pronto dos artefatos | José Joaquim da Silva Neto | -- |
+
