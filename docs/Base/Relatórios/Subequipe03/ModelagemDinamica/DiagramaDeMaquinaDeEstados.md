@@ -104,6 +104,153 @@ Essa decisão foi verificada contra o processo específico modelado, não é uma
 
 As decisões apresentadas não são as únicas tecnicamente válidas, modelagem de máquina de estados raramente tem resposta única, especialmente na escolha do nível de granularidade. Um projeto com prazo mais apertado poderia razoavelmente colapsar estados adjacentes do caminho feliz, usar auto-laços em vez de pseudo-estados de escolha, ou criar estados de erro genéricos sem base documental real. A escolha feita aqui prioriza distinguibilidade comportamental entre estados, separação conceitual entre ação e decisão, e fidelidade a um sistema real e verificável, consistente com o mesmo critério já aplicado na modelagem estática, ao custo de mais elementos no diagrama e maior esforço de pesquisa na etapa de modelagem.
 
+## 9. Diagrama de Estados do Usuário (Sessão, Perfil e Segurança da Conta)
+
+```mermaid
+flowchart TD
+    %% Pseudo-estados
+    Inicio((Início))
+    Fim(((Fim)))
+
+    %% Inicialização
+    Inicio -->|acessarPlataforma| Visitante([Visitante])
+    Visitante -->|realizarLogin| ValidandoCredenciais([Validando Credenciais])
+
+    subgraph Autenticacao [Autenticação]
+        direction TB
+        ValidandoCredenciais -->|senha_correta / dispararOTP| DesafioMFA([Desafio MFA])
+    end
+
+    %% Exceções de Autenticação
+    ValidandoCredenciais -->|falhas > rate_limit| ContaBloqueada([Conta Bloqueada])
+    ContaBloqueada -->|redefinirSenha / restaurarAcesso| ValidandoCredenciais
+
+    DesafioMFA -->|sucesso / gerarTokenSessao| NavegacaoLogada([Navegação Logada])
+
+    %% Núcleo do Sistema
+    subgraph SessaoAtiva [Sessão Ativa]
+        direction TB
+        
+        NavegacaoLogada
+        
+        subgraph JornadaComprador [Domínio: Comprador]
+            direction LR
+            Checkout([Checkout])
+            AguardandoPagamento([Aguardando Pagamento])
+            
+            Checkout -->|confirmarPedido / reservarEstoque| AguardandoPagamento
+            AguardandoPagamento -->|recusado / notificarFalha| Checkout
+        end
+
+        subgraph JornadaVendedor [Domínio: Vendedor]
+            direction LR
+            ProgressiveProfiling([Progressive Profiling])
+            PainelVendedor([Painel Vendedor])
+            
+            ProgressiveProfiling -->|submeterDocumentacao / atualizarPerfil| PainelVendedor
+        end
+
+        %% Conexões internas
+        NavegacaoLogada -->|estoque_disponivel| Checkout
+        AguardandoPagamento -->|aprovado / emitirNF_e_Separar| NavegacaoLogada
+        
+        NavegacaoLogada -->|faltam_dados_fiscais| ProgressiveProfiling
+        NavegacaoLogada -->|cadastro_valido| PainelVendedor
+        PainelVendedor -->|sairPainel| NavegacaoLogada
+    end
+
+    %% Gestão de Ciclo de Vida e Segurança
+    SessaoAtiva -->|tempo > limite / invalidarToken| SessaoExpirada([Sessão Expirada])
+    SessaoExpirada -->|renovarAcesso| ValidandoCredenciais
+
+    SessaoAtiva -->|alto_risco_fraude / revogarAcessos| ContaSuspensa([Conta Suspensa])
+    ContaSuspensa -->|recorrerSuspensao| AtendimentoOuvidoria([Atendimento Ouvidoria])
+    AtendimentoOuvidoria -->|deferido / removerRestricao| NavegacaoLogada
+
+    %% Terminações
+    SessaoAtiva -->|solicitarEncerramento / anonimizarDados| Fim
+    ContaSuspensa -->|aplicarBanimentoDefinitivo| Fim
+    AtendimentoOuvidoria -->|indeferido| Fim
+```
+
+### 9.1 Introdução
+
+Este diagrama complementa o de Autenticação apresentado nas seções anteriores. Enquanto aquele descreve o mecanismo interno do login (validação de senha, geração de token, tratamento de erro), este descreve o ciclo de vida do usuário na plataforma como um todo: o momento em que ele deixa de ser um Visitante anônimo, o que acontece durante toda a sua Sessão Ativa (incluindo a bifurcação entre a jornada de comprador e a de vendedor), e as formas pelas quais essa sessão pode terminar, seja por expiração, por encerramento voluntário ou por suspensão de segurança. As mesmas categorias de elementos usadas no diagrama de autenticação (estados simples e compostos, transições rotuladas por evento/ação, estados inicial e final) foram reaproveitadas aqui, e as justificativas a seguir seguem a mesma dinâmica de decisão, crítica e trade-off já adotada nas seções 2 a 7.
+
+## 10. O Estado "Visitante" e a Integração entre os Dois Diagramas
+
+### 10.1 A decisão
+
+O diagrama parte de um estado Visitante, alcançado pelo evento acessarPlataforma a partir do pseudo-estado inicial, e só então transiciona para Validando Credenciais quando o evento realizarLogin ocorre. Validando Credenciais é o mesmo nome de estado já usado como estado composto no diagrama de autenticação (seção 3), e é reaproveitado aqui como ponto de entrada do fluxo de login, exatamente como SessaoExpirada também retorna a ele via renovarAcesso.
+
+### 10.2 Justificativa crítica
+
+A alternativa seria começar o diagrama de estados do usuário diretamente em Validando Credenciais ou em Navegação Logada, omitindo o estado de Visitante por ele não fazer parte do processo de autenticação em si. O problema dessa simplificação é que ela ignora um comportamento real e distinguível do sistema: um Visitante tem acesso de leitura à vitrine de produtos sem estar autenticado, um comportamento que nenhum outro estado do diagrama replica. Pelo mesmo critério de distinguibilidade comportamental usado na seção 2.2 (Harel, 1987), esse é um estado que precisa existir. Reaproveitar o nome Validando Credenciais, em vez de criar um estado equivalente com outro nome, também é uma decisão deliberada: ela mantém a rastreabilidade entre os dois diagramas, o Validando Credenciais que aparece aqui é o mesmo estado composto detalhado internamente na seção 3, apenas representado em um nível de abstração mais alto neste diagrama de escopo mais amplo.
+
+### 10.3 Trade-off reconhecido
+
+Ao reaproveitar o nome Validando Credenciais sem repetir seu detalhamento interno (o sub-estado Verificando Email e Senha e o pseudo-estado de escolha da seção 3), este diagrama assume que quem o lê já tem, ou pode consultar, o diagrama de autenticação para entender o que acontece dentro desse estado. Essa é uma aplicação direta do princípio de ocultamento de complexidade dos estados compostos (seção 3.2), mas estendida entre dois diagramas em vez de dentro de um único diagrama, o que exige que ambos sejam lidos como um par, não isoladamente.
+
+## 11. Conta Bloqueada Versus Conta Suspensa: Duas Restrições Não Convergidas
+
+### 11.1 A decisão
+
+O diagrama modela duas restrições de acesso distintas: Conta Bloqueada, alcançada quando as falhas de login excedem um limite de taxa (falhas > rate_limit) durante Validando Credenciais, e Conta Suspensa, alcançada a partir de Sessão Ativa quando o sistema detecta alto risco de fraude (alto_risco_fraude / revogarAcessos). Diferentemente do que foi feito com os três pontos de erro do diagrama de autenticação (seção 6), esses dois estados não foram unificados em um único estado de "acesso restrito".
+
+### 11.2 Justificativa crítica
+
+Essa decisão aplica o mesmo critério de distinguibilidade comportamental da seção 6.2, mas leva a uma conclusão oposta porque a situação real é diferente: ali, as três origens de erro levavam ao mesmo comportamento subsequente (informar o erro e encerrar o processo), o que justificava convergência. Aqui, o comportamento subsequente diverge de forma significativa. Conta Bloqueada é resolvida por um fluxo de autoatendimento (redefinirSenha / restaurarAcesso, retornando diretamente a Validando Credenciais), enquanto Conta Suspensa exige um processo de contestação formal (recorrerSuspensao, passando por Atendimento Ouvidoria, com dois desfechos possíveis, deferido ou indeferido). Como o critério de Harel (1987) para a existência de um estado é justamente responder de forma distinta a eventos futuros, manter os dois estados separados é a escolha correta aqui, mesmo que ambos representem, em linguagem de negócio, "o usuário não consegue acessar a conta".
+
+### 11.3 Trade-off reconhecido
+
+Um leitor menos familiarizado com o domínio pode inicialmente confundir os dois estados por sua semelhança superficial de nome e de efeito imediato (impedir o acesso). Um rótulo mais explícito nas transições de entrada (por exemplo, diferenciando visualmente "bloqueio temporário" de "suspensão por risco") reduziria essa ambiguidade, mas aumentaria a poluição visual do diagrama. A escolha feita prioriza a precisão comportamental sobre a clareza imediata do rótulo, assumindo que a legenda textual do evento (rate_limit versus alto_risco_fraude) é suficiente para diferenciar os dois casos.
+
+## 12. Transições Diretas com Múltiplos Rótulos em Vez de Pseudo-estados de Escolha
+
+### 12.1 A decisão
+
+Diferentemente do diagrama de autenticação, que usa pseudo-estados de escolha explícitos (losangos) para representar decisões dentro de Validando Credenciais e Finalizando Autenticação (seção 3), este diagrama representa suas decisões por meio de múltiplas transições rotuladas saindo do mesmo estado de origem. É o caso de Atendimento Ouvidoria, que tem duas transições de saída (deferido / removerRestricao, levando de volta a Navegação Logada, e indeferido, levando a Fim), e de Conta Suspensa, que também tem duas saídas possíveis (recorrerSuspensao e aplicarBanimentoDefinitivo).
+
+### 12.2 Justificativa crítica
+
+As duas notações são formalmente equivalentes na UML: um losango de escolha nada mais é do que um agrupamento visual de transições que, de outra forma, sairiam diretamente do estado anterior. A escolha por transições diretas aqui, em vez de losangos, se justifica pelo nível de abstração do diagrama: como cada decisão deste diagrama já está associada a um evento de negócio claramente nomeado (deferido, indeferido, aplicarBanimentoDefinitivo), o losango adicional não separaria uma ação de uma decisão, como fazia na seção 3.2, ele apenas repetiria a mesma bifurcação já expressa pelos rótulos das transições. Ou seja, aqui não há uma etapa de verificação a ser isolada da decisão sobre o resultado dela, a decisão (por exemplo, o julgamento do recurso na ouvidoria) acontece fora do escopo modelado, e o diagrama só precisa representar os dois desfechos possíveis.
+
+### 12.3 Trade-off reconhecido
+
+Essa inconsistência de notação entre os dois diagramas (losango em um, transições diretas no outro) é uma escolha discutível do ponto de vista de padronização visual: um leitor que espera a mesma convenção nos dois diagramas pode estranhar a ausência de losangos aqui. A justificativa técnica dada acima é válida, mas um padrão de equipe mais rígido poderia razoavelmente exigir o uso do mesmo elemento notacional em ambos os diagramas por consistência, mesmo quando não estritamente necessário.
+
+## 13. Convergência de Múltiplas Origens para o Estado Final
+
+### 13.1 A decisão
+
+O pseudo-estado final Fim recebe transições de três origens distintas: de Sessão Ativa, por encerramento voluntário do próprio usuário (solicitarEncerramento / anonimizarDados), de Conta Suspensa, por banimento definitivo aplicado pela plataforma (aplicarBanimentoDefinitivo), e de Atendimento Ouvidoria, por indeferimento do recurso (indeferido).
+
+### 13.2 Justificativa crítica
+
+Assim como um diagrama de máquina de estados pode ter múltiplos pseudo-estados de escolha, ele também pode ter um único pseudo-estado final recebendo transições de qualquer estado em que o processo modelado legitimamente termina (OMG UML Specification, seção de State Machine Diagrams). As três origens aqui representam desfechos de negócio genuinamente diferentes (saída voluntária, saída punitiva, saída por decisão de segunda instância), mas o efeito final sobre o estado do sistema é equivalente o suficiente para não exigir três estados finais distintos: em todos os casos, a conta do usuário deixa de estar ativa na plataforma. Isso segue o mesmo raciocínio de convergência já aplicado ao estado Tratando Erro no diagrama de autenticação (seção 6), agora aplicado ao término do processo em vez de à sua falha intermediária.
+
+### 13.3 Trade-off reconhecido
+
+Assim como ocorre com Tratando Erro (seção 6.3), convergir para um único Fim custa a distinção da causa do encerramento: o diagrama, isoladamente, não registra se a conta terminou por decisão do próprio usuário ou por penalidade da plataforma, essa distinção fica implícita apenas no rótulo da transição de entrada, não no estado alcançado. Para fins de auditoria e de conformidade (por exemplo, a diferença entre anonimizarDados, associado a uma solicitação de exclusão de dados pelo titular, e aplicarBanimentoDefinitivo, associado a uma penalidade), essa informação provavelmente precisaria ser preservada fora do diagrama, em um registro de log separado.
+
+## 14. Base Real e Escopo Não Coberto
+
+### 14.1 A decisão
+
+Os eventos de segurança do diagrama (dispararOTP como segundo fator de autenticação, o bloqueio por taxa de tentativas em ContaBloqueada, o Progressive Profiling como etapa de completude cadastral do vendedor, e a suspensão por alto_risco_fraude com posterior contestação via ouvidoria) foram baseados em práticas comuns de plataformas de comércio eletrônico de grande porte, e não em fluxos genéricos inventados. Da mesma forma, o diagrama não usa regiões concorrentes (ortogonais) para representar a Jornada Comprador e a Jornada Vendedor, embora elas apareçam como subgrafos dentro de Sessão Ativa.
+
+### 14.2 Justificativa crítica
+
+Mecanismos como autenticação multifator via OTP, bloqueio temporário por excesso de tentativas e motores de análise de risco que suspendem contas suspeitas até revisão humana são amplamente documentados como práticas de segurança de plataformas de e-commerce e pagamento, o que dá a esses estados a mesma fundamentação em sistema real já buscada no diagrama de componentes e no diagrama de autenticação (seção 5). Quanto à ausência de regiões concorrentes: apesar de Jornada Comprador e Jornada Vendedor estarem desenhadas como dois subgrafos dentro de Sessão Ativa, elas não são regiões ortogonais no sentido formal de Harel (1987), pois o usuário não está simultaneamente em Checkout e em Painel Vendedor, ele está em um ou em outro, dependendo de qual transição de Navegação Logada foi disparada (estoque_disponivel leva a um lado, faltam_dados_fiscais ou cadastro_valido levam ao outro). O agrupamento visual em subgrafos serve apenas para organizar o diagrama por domínio de negócio, não para expressar concorrência real, a mesma distinção já discutida, para o caso negativo, na seção 7.2.
+
+### 14.3 Limitação reconhecida
+
+A ressalva já feita na seção 5.3 se aplica igualmente aqui: os mecanismos de MFA, bloqueio e análise de risco foram modelados com base em práticas gerais de mercado, não necessariamente idênticas à implementação interna exata de uma plataforma específica, o que é uma simplificação assumida conscientemente para fins do exercício. Além disso, o agrupamento visual de Jornada Comprador e Jornada Vendedor em subgrafos, embora tecnicamente correto quanto à ausência de concorrência real, é uma escolha de notação que pode ser lida por engano como uma região ortogonal por quem conhece a notação de statecharts mas não observa com atenção que existe apenas um caminho ativo por vez.
+
+## 15. Considerações Finais sobre o Diagrama de Estados do Usuário
+
+Este segundo diagrama estende o de autenticação para o restante do ciclo de vida do usuário na plataforma, mantendo os mesmos critérios de decisão já adotados nas seções anteriores: distinguibilidade comportamental entre estados (o que justifica manter Conta Bloqueada e Conta Suspensa separadas), ocultamento de complexidade por meio de estados compostos (o que justifica reaproveitar Validando Credenciais sem repeti-lo) e fundamentação em práticas reais de segurança de plataformas de comércio eletrônico. A principal diferença de estilo em relação ao primeiro diagrama é o uso de transições diretas com múltiplos rótulos em vez de pseudo-estados de escolha explícitos, uma escolha justificada pelo nível de abstração das decisões modeladas, mas que introduz uma inconsistência notacional reconhecida entre os dois artefatos. Assim como no diagrama de autenticação, essas decisões não são as únicas tecnicamente válidas, e ficam sujeitas a revisão caso os requisitos do sistema mudem, por exemplo, caso se torne necessário preservar a causa exata de encerramento de uma conta para fins de auditoria.
+
 ### Referências
 
 - Harel, D. (1987). *Statecharts: A Visual Formalism for Complex Systems*. Science of Computer Programming, 8(3), 231-274.
@@ -117,3 +264,4 @@ As decisões apresentadas não são as únicas tecnicamente válidas, modelagem 
 | -- | -- | -- | -- | -- |
 | 1.0 | 14/09/2026 | Criação da página | José Joaquim da Silva Neto | -- |
 | 1.1 | 17/09/2026 | Criaçao de relatorio sobre Diagrama de estados da autenticação(Login) | João Paulo Barbosa Pereira Nunes | -- |
+| 1.2 | 17/09/2026 | Adição da parte sobre o Diagrama de estados de estados do Usuário | Júlia Santana Campos | -- |
