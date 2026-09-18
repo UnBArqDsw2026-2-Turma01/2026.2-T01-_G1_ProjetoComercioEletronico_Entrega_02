@@ -20,7 +20,9 @@ A UML classifica o diagrama de casos de uso entre os de comportamento. Ele está
 
 <sub>Clique na imagem para abrir em tela cheia, com zoom.</sub>
 
-> _Figura 6 — Diagrama de Casos de Uso do G1\_ProjetoComercioEletronico. Sete atores, dois deles `«externo»`; generalização entre Vendedor e seus dois tipos; vinte e um casos de uso em quatro pacotes; dezesseis associações e doze relacionamentos `«include»`/`«extend»`. A legenda rastreia cada grupo de casos de uso ao requisito funcional ou à concern do Rich Picture que o origina. Fonte: Subequipe 01, 2026._
+> _Figura 6 — Diagrama de Casos de Uso do G1\_ProjetoComercioEletronico. Sete atores, dois deles `«externo»`; generalização entre Vendedor e seus dois tipos; vinte e um casos de uso em quatro pacotes, cada elipse com o seu identificador `UC01`–`UC21`; dezesseis associações e doze relacionamentos `«include»`/`«extend»`. A legenda rastreia cada faixa de identificadores ao requisito funcional ou à concern do Rich Picture que a origina. Fonte: Subequipe 01, 2026._
+
+<sub>Versão revisada em 17/09/2026: as elipses passaram a carregar os identificadores `UC01`–`UC21`, aplicando a ação 6 da [ata de 16/09/2026](/ReunioesAtas/Subequipe1/Ata16_09.md), que apontou que a legenda os citava sem que o desenho os mostrasse.</sub>
 
 ---
 
@@ -39,12 +41,13 @@ A UML classifica o diagrama de casos de uso entre os de comportamento. Ele está
 | # | Passo | O que foi feito |
 | -- | -- | -- |
 | 1 | Atores | Cada um dos sete elementos de estrutura do Rich Picture foi testado contra a definição de ator: papel externo que interage com o sistema. Seis passaram; o catálogo ficou dentro da fronteira |
-| 2 | Fronteira e pacotes | O contorno azul do Rich Picture virou o retângulo de fronteira; os quatro pacotes internos repetem os recortes do Diagrama de Classes, para que os dois diagramas possam ser lidos lado a lado |
+| 2 | Fronteira e pacotes | O contorno azul do Rich Picture virou o retângulo de fronteira; os quatro pacotes internos — *Descoberta do produto*, *Compra*, *Venda* e *Pós-venda* — agrupam os casos de uso por **objetivo do ator**. Não são os pacotes do Diagrama de Classes, que agrupa por **coesão de domínio** (*Contas e Acesso*, *Catálogo e Descoberta*, *Transação*, *Pós-venda*): a divergência é de critério, e está registrada como decisão 5 da [ata de 17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md) |
 | 3 | Casos de uso do comprador | RF-A01 a RF-A05 viraram o pacote *Descoberta do produto*; as transições T-B01 a T-B08 viraram o pacote *Compra* |
 | 4 | Casos de uso do vendedor | RF-C01 a RF-C04 sustentam os três casos de uso do pacote *Venda*, preservando a precedência que RN-C04 impõe: vincular ao catálogo antes de descrever |
 | 5 | Casos de uso de pós-venda | O processo 3 do Rich Picture — reclamação, mediação, resposta ou reembolso — virou o pacote *Pós-venda* |
 | 6 | `«include»` ou `«extend»` | Para cada par de casos de uso relacionados, a pergunta foi "acontece sempre ou só às vezes?", e a resposta teve de vir de uma regra da Entrega 1, não de intuição. Os pares sem regra que os sustentasse foram desfeitos |
 | 7 | Legenda e revisão | Cada faixa de casos de uso recebeu, na legenda embutida, o código do achado que a origina; o que não tinha origem observada foi declarado nos limites desta página |
+| 8 | Revisão em pares | O diagrama foi revisado por Pedro Luciano de Azevedo na reunião de 16/09/2026 e esta página, na de 17/09/2026, pelo rodízio registrado nas duas atas. Os apontamentos aceitos estão aplicados nesta versão: identificadores nas elipses, critério dos pacotes, interfaces dos parceiros externos na rastreabilidade e a citação da Máquina de Estados na decisão 3 |
 
 ---
 
@@ -72,7 +75,7 @@ A UML classifica o diagrama de casos de uso entre os de comportamento. Ele está
 
 **Por quê.** RN-B08 — "existem dois caminhos de compra, e o direto não passa pelo carrinho" —, sustentada por T-B08 (comprar agora leva ao checkout sem passar pelo carrinho) e T-B07 (continuar no carrinho leva à sequência de checkout). Um caso de uso "Comprar" unificado apagaria o único achado do Recorte B sobre topologia de fluxo.
 
-**Trade-off.** A duplicação da seta é aparente: a leitura correta é que `Pagar pedido` é ponto de convergência, e foi o que a [Máquina de Estados](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) do Patrick confirmou depois, com `Aguardando pagamento` alcançável por dois caminhos. Vale registrar que T-B07 e T-B08 estão marcadas como **inferidas** na Engenharia Reversa — o percurso foi interrompido antes da tela de pagamento —, e portanto esta decisão herda a inferência.
+**Trade-off.** A duplicação da seta é aparente: a leitura correta é que `Pagar pedido` é ponto de convergência, e a [Máquina de Estados](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) do Patrick a confirma — mas em outro ponto do desenho, e não onde esta página afirmava. A revisão de 17/09 corrigiu a citação (apontamento 3 da seção 5.3 da [ata de 17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md)): na máquina, os dois caminhos de compra, T-B07 e T-B08, entram pela **transição inicial**; os dois caminhos que chegam a `Aguardando pagamento` são `endereço confirmado` e `tentar outro meio`, que são outra coisa. A convergência existe, a referência cruzada é que estava no lugar errado. Vale registrar que T-B07 e T-B08 estão marcadas como **inferidas** na Engenharia Reversa — o percurso foi interrompido antes da tela de pagamento —, e portanto esta decisão herda a inferência.
 
 ### 4. `Finalizar compra` inclui `Gerenciar endereço de entrega`
 
@@ -104,7 +107,7 @@ A UML classifica o diagrama de casos de uso entre os de comportamento. Ele está
 
 **Por quê.** No Rich Picture ele é *stakeholder* com concern própria — "quem tem razão?" —, e concern, no sentido de Monk e Howard (1998), é atributo de quem trabalha, não de software. Quem decide o desfecho de uma mediação é uma pessoa; o que a plataforma faz é registrar a decisão e executar suas consequências — notificar, estornar, encerrar. Essa divisão é literalmente a raia do meio do meu Diagrama de Atividades: as ações ali são de registro e execução, e a única de julgamento, `Analisar evidências`, tem uma pessoa por trás.
 
-**Trade-off.** É a decisão mais discutível desta página, e a alternativa é defensável. O Patrick modelou `Serviço de Pós-venda` como componente **da** plataforma, e o Pedro modelou `Atendente` como classe do domínio, com a operação `mediar(r: Reclamacao)` — nos dois diagramas o atendimento está dentro. Não há contradição, e sim mudança de nível: uma classe `Atendente` é o registro que o sistema guarda de uma pessoa; um ator `Atendimento` é a pessoa que opera o sistema. Registro o ponto aqui porque, se alguém for unificar os seis diagramas da subequipe, é neste elemento que as três leituras se tocam.
+**Trade-off.** É a decisão mais discutível desta página, e a alternativa é defensável. O Patrick modelou `Serviço de Pós-venda` como componente **da** plataforma, e o Pedro modelou `Atendente` como classe do domínio, com a operação `mediar(r: Reclamacao)` — nos dois diagramas o atendimento está dentro. Não há contradição, e sim mudança de nível: uma classe `Atendente` é o registro que o sistema guarda de uma pessoa; um ator `Atendimento` é a pessoa que opera o sistema. Registro o ponto aqui porque é neste elemento que as três leituras se tocam. A subequipe chegou a decidir, na reunião de 16/09/2026, unificar os nomes (decisão 9 da [ata de 16/09/2026](/ReunioesAtas/Subequipe1/Ata16_09.md)); em 17/09 reviu a decisão e manteve os três — ator `Atendimento` aqui, raia `Plataforma (Atendimento)` no [Diagrama de Atividades](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeAtividades.md) e classe `Atendente` no [Diagrama de Classes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeClasses.md) —, com referência cruzada explícita nas três páginas, porque a divergência é de nível de abstração e unificá-la apagaria a distinção (decisão 4 da [ata de 17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md)).
 
 ---
 
@@ -118,10 +121,11 @@ As Diretrizes pedem para usar os vários recursos de modelagem da notação. Est
 | Estereótipo `«externo»` em ator | Operadora de Pagamento e Transportadora | Marca o ator que é sistema de terceiro, e não pessoa — ator não precisa ser humano (BOOCH; RUMBAUGH; JACOBSON, 2005) |
 | Generalização entre atores | `Vendedor` → `Loja Oficial` e `Vendedor Autônomo` | Tensão do Rich Picture: dois papéis distintos com os mesmos casos de uso |
 | Fronteira do sistema | Retângulo `G1_ProjetoComercioEletronico` | Contorno azul do Rich Picture; separa quem usa de o que é usado |
-| Pacote dentro da fronteira | Descoberta do produto, Compra, Venda, Pós-venda | Mesmos quatro recortes do Diagrama de Classes |
+| Pacote dentro da fronteira | Descoberta do produto, Compra, Venda, Pós-venda | Agrupamento por objetivo do ator — critério distinto do Diagrama de Classes, que agrupa por coesão de domínio |
 | Associação ator–caso de uso | Dezesseis associações | Participação do ator no caso de uso |
 | `«include»` | Seis relacionamentos | Comportamento que o caso base executa sempre |
 | `«extend»` | Seis relacionamentos | Comportamento condicional, sem que a base conheça a extensão |
+| Identificador de caso de uso | `UC01`–`UC21`, dentro de cada elipse | Liga a elipse à faixa da legenda embutida e à tabela de rastreabilidade desta página |
 | Legenda embutida | Rodapé da imagem, por faixa `UC01`–`UC21` | Rastreabilidade legível sem sair do diagrama |
 
 ---
@@ -133,12 +137,12 @@ As Diretrizes pedem para usar os vários recursos de modelagem da notação. Est
 | `Comprador` | Jenny, no centro do Rich Picture | `Comprador` no [Diagrama de Classes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeClasses.md); raia do Comprador no [Diagrama de Atividades](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeAtividades.md) |
 | `Vendedor`, `Loja Oficial`, `Vendedor Autônomo` | Estrutura e tensão do Rich Picture | `Vendedor.tipo: TipoVendedor` no Diagrama de Classes |
 | `Atendimento` | Concern "quem tem razão?" | Classe `Atendente`; raia `Plataforma (Atendimento)` no Diagrama de Atividades |
-| `Operadora de Pagamento`, `Transportadora` | Estrutura do Rich Picture | Componentes `«externo»` e interfaces `IPagamento` e `IRastreio` no [Diagrama de Componentes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeComponentes.md) |
+| `Operadora de Pagamento`, `Transportadora` | Estrutura do Rich Picture | Componentes `«externo»` no [Diagrama de Componentes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeComponentes.md), fornecendo `IAutorizacao` e `ICotacaoEntrega`. `IPagamento` e `IRastreio` são interfaces dos serviços da própria plataforma — Pagamentos e Entrega —, e não dos parceiros: a correção veio do apontamento 2 da seção 5.3 da [ata de 17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md) |
 | `UC01`–`UC04` — `Buscar produto` e suas três extensões | RF-A01, RF-A02, RF-A03; RN-A02 | [Diagrama de Sequência](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeSequencia.md) — busca e escolha de produto |
 | `UC05`–`UC07` — ficha, reputação e frete | RN-A05; RN-A04 e RF-A04 | Diagrama de Sequência; interfaces `IFichaProduto` e `IFrete` |
 | `UC08`–`UC10` — carrinho, endereço e finalização | T-B01, T-B03, T-B04, T-B07; RN-B01, RN-B02 | Máquina de Estados do Pedido — `Aguardando endereço → Aguardando pagamento` |
 | `UC11`–`UC12` — `Comprar agora` e `Pagar pedido` | RN-B08, T-B08 | Máquina de Estados do Pedido — `Autorizando`, `Pago`, `Recusado` |
-| `UC13` — `Acompanhar envio` | Processo 2 do Rich Picture (produto: vendedor → transportadora → Jenny) | Estados `Enviado` e `Entregue`; interface `IRastreio` |
+| `UC13` — `Acompanhar envio` | Processo 2 do Rich Picture (produto: vendedor → transportadora → Jenny) | Estados `Enviado` e `Entregue`; interface `IRastreio`, fornecida pelo `Serviço de Entrega` |
 | `UC14`–`UC16` — pacote Venda | RF-C01 a RF-C04; RN-C03, RN-C04, RN-C06 | Máquina de Estados do Anúncio — estado composto `Rascunho` |
 | `UC17`–`UC21` — pacote Pós-venda | Processo 3 do Rich Picture e as concerns da Jenny e do atendimento | Diagrama de Atividades, integralmente; estados `Em disputa` e `Reembolsado` |
 
@@ -175,4 +179,5 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
 | 1.0 | 16/09/2026 | Criação da página com o diagrama (autoria coletiva da subequipe) e o roteiro de redação | Pedro Luciano de Azevedo | -- |
-| 1.1 | 17/09/2026 | Redação do conteúdo da página: justificativa da escolha do diagrama a partir do Rich Picture, método de montagem em sete passos, sete decisões de modelagem rastreadas a RN-A, RN-B, RN-C e às transições T-B e T-C, recursos da notação utilizados, tabela de rastreabilidade e limites | Guilherme Costa Zanella | -- |
+| 1.1 | 17/09/2026 | Redação do conteúdo da página: justificativa da escolha do diagrama a partir do Rich Picture, método de montagem em sete passos, sete decisões de modelagem rastreadas a RN-A, RN-B, RN-C e às transições T-B e T-C, recursos da notação utilizados, tabela de rastreabilidade e limites | Guilherme Costa Zanella | Pedro Luciano de Azevedo |
+| 1.2 | 17/09/2026 | Aplicação dos apontamentos da revisão em pares: identificadores `UC01`–`UC21` nas elipses (ação 6 da ata de 16/09/2026), critério dos pacotes (decisão 5 da ata de 17/09/2026), interfaces dos parceiros externos na rastreabilidade, correção da citação da Máquina de Estados na decisão 3, registro da decisão 4 sobre os nomes do atendimento e passo 8 de revisão em pares | Guilherme Costa Zanella | -- |

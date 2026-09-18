@@ -8,7 +8,7 @@ Conforme a divisão registrada em [1.1.1. SubEquipe_01](/Base/Relatórios/1.1.1.
 
 O diagrama de atividades é o diagrama de comportamento da UML voltado a **fluxo de controle e de dados** entre ações: mostra a sequência de passos, as decisões, o paralelismo e — com **raias** (*swimlanes* ou partições) — quem é responsável por cada passo (BOOCH; RUMBAUGH; JACOBSON, 2005; OMG, 2017, seção 15). Desde a UML 2, sua semântica é baseada em redes de Petri, o que dá significado preciso a bifurcação (`fork`) e junção (`join`): a junção só prossegue quando **todos** os fluxos de entrada chegaram.
 
-É o diagrama da UML mais próximo do BPMN usado na Entrega 1, e a escolha entre os dois é de propósito: o BPMN é orientado a processo de negócio, com pools e mensagens entre participantes; o diagrama de atividades é orientado a **fluxo dentro de um sistema**, com raias que separam responsabilidade sem impor fronteira de comunicação. Para um fluxo em que a plataforma centraliza tudo, a raia é a abstração certa.
+É o diagrama da UML mais próximo do BPMN usado na Entrega 1, e a escolha entre os dois é de propósito: o BPMN é orientado a processo de negócio, com pools e mensagens entre participantes; o diagrama de atividades é orientado a **fluxo dentro de um sistema**, com raias que separam responsabilidade sem impor fronteira de comunicação. Para um fluxo em que a plataforma centraliza tudo, a raia é a abstração certa. Fowler (2004) resume a força própria da notação: o que o diagrama de atividades faz e um fluxograma não faz é descrever **comportamento paralelo** — e é exatamente esse recurso que a decisão 2 desta página explora, com os dois pares `fork`/`join`.
 
 ---
 
@@ -43,6 +43,7 @@ O diagrama de atividades é o diagrama de comportamento da UML voltado a **fluxo
 | 5 | Estados | Cada ação da plataforma que muda a situação da reclamação recebeu, entre colchetes, o valor de `StatusReclamacao` do Diagrama de Classes, conferido um a um contra a enumeração |
 | 6 | Interfaces | Revisão contra o Diagrama de Componentes, para nomear de onde vem o rastreio (`IRastreio`) e por onde sai o estorno (`IPagamento`) |
 | 7 | Nós finais | Um por desfecho, cada um encerrando com o status correspondente, em vez de convergirem em um só |
+| 8 | Revisão em pares | O diagrama foi revisado por Pedro Luciano de Azevedo na reunião de 16/09/2026, sem apontamento que exigisse alteração no desenho, e esta página na de 17/09/2026, pelo rodízio registrado nas duas atas. O apontamento aceito — Fowler (2004) listado nas referências sem citação no texto — está aplicado nesta versão |
 
 ---
 
@@ -54,7 +55,7 @@ O diagrama de atividades é o diagrama de comportamento da UML voltado a **fluxo
 
 **Por quê.** No Rich Picture o atendimento é *stakeholder* com concern própria, o que é um argumento por raia própria; mas metade das ações da raia do meio são registros e notificações automáticas, que não são trabalho de um atendente. O nome composto é a solução de compromisso: preserva a visibilidade que a Entrega 1 dá ao atendimento sem afirmar que ele executa o que o software executa.
 
-**Trade-off.** Há uma tensão declarada com o meu próprio Diagrama de Casos de Uso, em que `Atendimento` é ator **fora** do sistema. Não é contradição, e sim mudança de sujeito: lá a pergunta é quem usa o sistema, e o atendente usa; aqui a pergunta é quem responde por cada passo do processo, e o passo pertence ao lado da plataforma. A alternativa de quatro raias seria mais fiel ao Rich Picture e menos legível, com dois participantes trocando setas a cada dois passos.
+**Trade-off.** Há uma tensão declarada com o meu próprio Diagrama de Casos de Uso, em que `Atendimento` é ator **fora** do sistema. Não é contradição, e sim mudança de sujeito: lá a pergunta é quem usa o sistema, e o atendente usa; aqui a pergunta é quem responde por cada passo do processo, e o passo pertence ao lado da plataforma. A alternativa de quatro raias seria mais fiel ao Rich Picture e menos legível, com dois participantes trocando setas a cada dois passos. A subequipe fechou o ponto na reunião de 17/09/2026: em vez de unificar os nomes, como previa a decisão 9 da [ata de 16/09/2026](/ReunioesAtas/Subequipe1/Ata16_09.md), ficam os três — ator `Atendimento` no [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeCasosDeUso.md), raia `Plataforma (Atendimento)` aqui e classe `Atendente` no [Diagrama de Classes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeClasses.md) —, com referência cruzada explícita nas três páginas, porque o que muda entre eles é o nível de abstração, e não o vocabulário (decisão 4 da [ata de 17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md)).
 
 ### 2. Bifurcação depois do registro da reclamação
 
@@ -120,7 +121,7 @@ As Diretrizes pedem para usar os vários recursos de modelagem da notação. Est
 
 | Elemento | Vem de | Vai para |
 | -- | -- | -- |
-| Raias `Comprador` / `Plataforma (Atendimento)` / `Vendedor` | Estrutura do Rich Picture e o achado da centralidade da plataforma | Atores `Comprador`, `Atendimento` e `Vendedor` no [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeCasosDeUso.md) |
+| Raias `Comprador` / `Plataforma (Atendimento)` / `Vendedor` | Estrutura do Rich Picture e o achado da centralidade da plataforma | Atores `Comprador`, `Atendimento` e `Vendedor` no [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeCasosDeUso.md). A raia `Plataforma (Atendimento)`, o ator `Atendimento` de lá e a classe `Atendente` do [Diagrama de Classes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeClasses.md) são o mesmo conceito em três níveis, mantidos separados pela decisão 4 da [ata de 17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md) |
 | Sequência de ações | Processo 3 do Rich Picture — reclamação, mediação, resposta ou reembolso | Casos de uso `UC17`–`UC21`, pacote Pós-venda |
 | Decisão `razão do comprador?` | Concern do atendimento — "quem tem razão?" | `Atendente.mediar(r: Reclamacao)` no Diagrama de Classes |
 | `[status = ...]` nas ações da plataforma | Enumeração `StatusReclamacao` do Diagrama de Classes | Os cinco valores conferidos um a um: `ABERTA`, `AGUARDANDO_VENDEDOR`, `EM_MEDIACAO`, `RESOLVIDA`, `REEMBOLSADA` |
@@ -159,4 +160,5 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
 | 1.0 | 16/09/2026 | Criação da página com o diagrama (autoria coletiva da subequipe) e o roteiro de redação | Pedro Luciano de Azevedo | -- |
-| 1.1 | 17/09/2026 | Redação do conteúdo da página: justificativa a partir da lacuna apontada no senso crítico do Rich Picture, método de montagem em sete passos, seis decisões de modelagem com a regra inferida declarada, recursos da notação utilizados, tabela de rastreabilidade e limites | Guilherme Costa Zanella | -- |
+| 1.1 | 17/09/2026 | Redação do conteúdo da página: justificativa a partir da lacuna apontada no senso crítico do Rich Picture, método de montagem em sete passos, seis decisões de modelagem com a regra inferida declarada, recursos da notação utilizados, tabela de rastreabilidade e limites | Guilherme Costa Zanella | Pedro Luciano de Azevedo |
+| 1.2 | 17/09/2026 | Aplicação dos apontamentos da revisão em pares: citação de Fowler (2004) no texto, registro da decisão 4 da ata de 17/09/2026 sobre os três nomes do atendimento na decisão 1 e na rastreabilidade, e passo 8 de revisão em pares | Guilherme Costa Zanella | -- |
