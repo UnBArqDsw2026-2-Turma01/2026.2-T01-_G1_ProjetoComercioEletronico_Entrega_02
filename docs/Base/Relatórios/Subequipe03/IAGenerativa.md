@@ -47,8 +47,10 @@ Enquanto eu estava fazendo os registros das práticas da metodologia, me surgira
 ## Júlia Santana Campos
 
 ### Lições aprendidas
+Nesta entrega, aprofundei meu entendimento sobre as modelagens dinâmica e estática. No Diagrama de Casos de Uso, revisei como as estruturas funcionam e, em conjunto com meus colegas, consegui aprofundar e aprimorar a minha modelagem. Já na modelagem de estados, apesar da complexidade, aprendi a ter um olhar mais aprofundado sobre os sistemas e a representar esse comportamento de forma intuitiva e organizada.
 
 ### Uso de IA Generativa
+Utilizei a IA para revisar pontos importantes sobre o funcionamento de cada diagrama e, principalmente, como apoio na sintaxe da linguagem Mermaid.
 
 ---
 
@@ -74,3 +76,4 @@ Além da modelagem UML, utilizei a IA para tirar dúvidas e aprimorar a sintaxe 
 | 1.0 | 14/09/2026 | Criação da página | José Joaquim da Silva Neto | -- |
 | 1.1 | 15/09/2026 | Adiciona evidências do uso de ia | José Joaquim da Silva Neto | -- |
 | 1.2 | 17/09/2026 | Adiciona lições aprendidas e uso de IA| Pedro Henrique Gomes | -- |
+| 1.3 | 18/09/2026 | Revisa a redação da seção de Júlia Santana Campos | Júlia Santana Campos | -- |
