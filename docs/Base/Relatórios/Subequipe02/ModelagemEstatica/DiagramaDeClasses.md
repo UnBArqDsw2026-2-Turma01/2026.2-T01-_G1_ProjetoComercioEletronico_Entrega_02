@@ -2,7 +2,7 @@
 
 <div style="text-align:center;">
 
-![Diagrama de Classes](../../../../Assets/Subequipe02/DiagramaDeClasses.png)
+![Diagrama de Classes](../../../../Assets/Subequipe2/DiagramaDeClasses.png)
 
 <p><strong>Diagrama de Classes</strong> — estrutura de entidades, atributos, métodos e relacionamentos do domínio de busca de produtos. <em>Autor: Julia Oliveira Patricio</em></p>
 

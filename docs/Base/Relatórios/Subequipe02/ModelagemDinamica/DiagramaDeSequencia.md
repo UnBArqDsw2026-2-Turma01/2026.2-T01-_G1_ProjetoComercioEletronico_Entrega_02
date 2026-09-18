@@ -2,7 +2,7 @@
 
 <div style="text-align:center;">
 
-![Diagrama de Sequência](../../../../Assets/Subequipe02/DiagramaDeSequencia.png)
+![Diagrama de Sequência](../../../../Assets/Subequipe2/DiagramaDeSequencia.png)
 
 <p><strong>Diagrama de Sequência</strong> — troca de mensagens e fluxo temporal do processamento de busca, destacando o padrão Boundary-Control-Entity e o ciclo de vida dos objetos. <em>Autor: Julia Oliveira Patricio</em></p>
 
