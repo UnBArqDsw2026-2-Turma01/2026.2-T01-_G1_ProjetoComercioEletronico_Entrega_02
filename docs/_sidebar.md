@@ -54,11 +54,11 @@
             - [Diagrama de Implantação](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeImplantacao.md)
             - [Diagrama de Pacotes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDePacotes.md)
             - [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeCasosDeUso.md)
-            - [Diagrama de Comunicção](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeComunicacao.md)
         - Modelagem Dinâmica
             - [Diagrama de Sequência](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeSequencia.md)
             - [Diagrama de Atividades](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeAtividades.md)
             - [Diagrama de Estados](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md)
+            - [Diagrama de Comunicação](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeComunicacao.md)
   - [1.2. Participações - Modelagem](/Base/1.2.ParticipacoesModelagem.md)
     - [1.2.1 SubEquipe01](/Base/Participacoes/ParticipacoesSubequipe1.md)
     - [1.2.2 SubEquipe02](/Base/Participacoes/ParticipacoesSubequipe2.md)
