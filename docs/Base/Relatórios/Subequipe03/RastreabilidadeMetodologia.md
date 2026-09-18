@@ -27,7 +27,7 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | Daily check-in — Sprint 2 (dia 2) | 13/09/2026 | Check-in assíncrono diário | 13/09/2026 | <a href="Assets/Subequipe3/Check-in/EvidenciaJoaquim1309.jpeg" target="_blank">Evidência Joaquim</a><br><a href="Assets/Subequipe3/Check-in/EvidenciaPedro1309.jpeg" target="_blank">Evidência Pedro</a> | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 2 (dia 3) | 14/09/2026 | Check-in assíncrono diário | 14/09/2026 | <a href="Assets/Subequipe3/Check-in/dailypresencial1409.jpeg" target="_blank">Evidência_Grupo</a> | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 2 (dia 4) | 15/09/2026 | Check-in assíncrono diário | 15/09/2026 | <a href="Assets/Subequipe3/Check-in/EvidenciaPedroJulia1509.jpeg" target="_blank">Evidência Pedro e Júlia</a><br><a href="Assets/Subequipe3/Check-in/EvidenciaJoaquim1509.jpeg" target="_blank">Evidência Joaquim</a> | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
-| Sprint 2 Review | 16/09/2026 |Apresentação final de todos os diagramas | | |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| Sprint 2 Review | 16/09/2026 |Apresentação final de todos os diagramas | 16/09/2026 | <a href="Assets/Subequipe3/Check-in/EvidenciaJoaquimPedroJoao1609.jpeg" target="_blank">Evidência Joaquim, Pedro e João</a> |  <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Sprint 2 Retrospective | 17/09/2026 |Reflexão sobre o processo geral do projeto | | |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
 
 *Legenda de status:* <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> · <span style="color: #2c07ff; font-weight: bold;">Concluído sem evidência registrada</span>
@@ -118,3 +118,4 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 2.1 | 15/09/2026 | Adiciona divergência na prática da metodologia | José Joaquim da Silva Neto | -- |
 | 2.2 | 15/09/2026 | Adiciona divergência na prática da metodologia durante as Dailys check-in do dia 05/09/2026 até 07/09/2026 | José Joaquim da Silva Neto | -- |
 | 2.3 | 15/09/2026 | Adiciona papéis exercidos durante as práticas da metodologia | José Joaquim da Silva Neto | Pedro Henrique Gomes |
+| 2.4 | 16/09/2026 | Adiciona check in de participação diária do dia 16/09/26 | José Joaquim da Silva Neto | -- |
