@@ -44,6 +44,7 @@ Escolhi a segunda por uma razão que a própria Entrega 1 deixou registrada. A s
 | 5 | Enumerações para os conjuntos fechados de estados observados ou inferidos; cada enumeração é consumida por um diagrama dinâmico da subequipe |
 | 6 | Revisão de cada classe contra a Engenharia Reversa: toda classe sem origem rastreável foi removida ou marcada como inferida |
 | 7 | Legenda de rastreabilidade embutida no próprio diagrama, para que a origem de cada elemento viaje com a figura |
+| 8 | Revisão em pares ([reunião de 16/09/2026](/ReunioesAtas/Subequipe1/Ata16_09.md)): o diagrama foi lido por Patrick contra os outros cinco da subequipe. Dois ajustes resultaram: `StatusPedido` alinhado aos doze estados da Máquina de Estados do Pedido, e `calcularFrete` movido de `Envio` para o serviço de domínio `ServicoDeEntrega` (decisão 11) |
 
 ---
 
@@ -121,6 +122,16 @@ Escolhi a segunda por uma razão que a própria Entrega 1 deixou registrada. A s
 
 **Por quê.** A ficha do produto exibe preço e parcelamento; o carrinho recalcula o resumo ao selecionar itens (RF-B02). Operações financeiras sucessivas sobre ponto flutuante acumulam erro de arredondamento. Fowler (2002) descreve o padrão *Money* justamente para isso: representar dinheiro como inteiro na menor unidade. `parcelar(n)` está na classe porque é onde a divisão sem perda de centavos precisa acontecer.
 
+### 11. `calcularFrete` é operação de `ServicoDeEntrega`, não de `Envio`
+
+**A decisão.** O cálculo de frete e prazo por CEP está em um serviço de domínio próprio, `ServicoDeEntrega «serviço de domínio»`, com `calcularFrete(cep: CEP, anuncio: Anuncio): Dinheiro`. `Envio` guarda o resultado — `frete` e `prazoDias` — mas não o calcula. A dependência `ServicoDeEntrega ..> Envio «produz»` registra que o serviço produz os valores que o envio vai carregar quando o pedido existir.
+
+**Por quê.** RN-A04: frete e prazo são calculados **na ficha do produto, antes do carrinho**. Nesse momento não existe `Pedido` — e, portanto, não existe `Envio`. A operação não pode pertencer a uma entidade que só nasce no checkout. A versão anterior deste diagrama tinha `Envio.calcularFrete(cep)`; a revisão em pares de 16/09 ([ata](/ReunioesAtas/Subequipe1/Ata16_09.md), seção 4.1, apontamento 2) mostrou a contradição com o [Diagrama de Sequência](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeSequencia.md), em que o frete é pedido nas mensagens 30–35, com o comprador ainda na ficha.
+
+**Consequência.** É o mesmo serviço que aparece como participante `Serviço de Entrega` na Sequência e como o componente que fornece `IFrete` no [Diagrama de Componentes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeComponentes.md). Como o Componentes já registrava que quem requer `IFrete` é o Serviço de Catálogo (decisão 2 daquela página), a Sequência passou a rotear a chamada pelo catálogo — mensagens 31 e 32 —, e os três diagramas contam a mesma história sobre quem calcula o frete e quem pede.
+
+**Embasamento.** Evans (2003) reserva o *domain service* para operações do domínio que não pertencem naturalmente a nenhuma entidade ou value object — o caso de um cálculo que depende de dois objetos (`CEP` e `Anuncio`) e precede a existência do terceiro (`Envio`). `Catalogo` já tinha esse papel no diagrama; `ServicoDeEntrega` segue o mesmo padrão e o mesmo estereótipo.
+
 ---
 
 ## Rastreabilidade
@@ -132,11 +143,12 @@ Escolhi a segunda por uma razão que a própria Entrega 1 deixou registrada. A s
 | `Listagem.termosAlternativos` | RN-A01, RF-A06 | Sequência: fragmento `alt total == 0` |
 | `Endereco`, `CEP` | RN-B02, RN-B04, RF-B04, T-B03, T-B04 | Componentes: `Serviço de Contas e Endereços` como componente próprio |
 | `Carrinho`, `ItemCarrinho` | RN-B01, RN-B07, RF-B01, RF-B02, T-B01 | Estados: guarda `[estoque disponível]` e ação `reservar estoque` |
-| `Pedido`, `Envio`, `Pagamento`, `StatusPedido` | RN-B01, T-B06, T-B07; eventos de borda do BPMN 1 | [Máquina de Estados](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) do Pedido |
+| `Pedido`, `Envio`, `Pagamento`, `StatusPedido` | RN-B01, T-B06, T-B07; eventos de borda do BPMN 1 | [Máquina de Estados](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) do Pedido — os doze valores de `StatusPedido` são os doze estados da máquina. Alinhados na revisão em pares de 16/09: `AUTORIZANDO` e `REEMBOLSADO` entraram, `EM_SEPARACAO` virou `EM_PREPARACAO` |
+| `ServicoDeEntrega.calcularFrete` | RN-A04 — frete e prazo por CEP, na ficha | Sequência: mensagens 31–34; Componentes: `IFrete`, fornecida pelo `Serviço de Entrega` e requerida pelo `Serviço de Catálogo` |
 | `StatusAnuncio` | RN-C01 a RN-C06; BPMN 2 | Máquina de Estados do Anúncio |
-| `Vendedor.tipo`, `Atendente`, `Reclamacao`, `StatusReclamacao` | Rich Picture — atores, concerns e processo de reclamação | [Casos de Uso](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeCasosDeUso.md) e [Atividades](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeAtividades.md) |
+| `Vendedor.tipo`, `Atendente`, `Reclamacao`, `StatusReclamacao` | Rich Picture — atores, concerns e processo de reclamação | [Casos de Uso](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeCasosDeUso.md) e [Atividades](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeAtividades.md). `Atendente` aqui é a **classe** — o registro que o sistema guarda de quem media; no Casos de Uso, `Atendimento` é o **ator** — a pessoa que opera o sistema; no Atividades, `Plataforma (Atendimento)` é a **raia** — a responsabilidade pelo passo. Mudança de nível, não contradição (decisão 4 da [ata de 17/09](/ReunioesAtas/Subequipe1/Ata17_09.md)) |
 | `Avaliacao`, `Reputacao` | RN-A05, RF-A05 | Casos de Uso: `Ver reputação do vendedor` com `«include»` |
-| Pacotes | Ramos de 1º nível do mapa mental | Casos de Uso: os mesmos quatro agrupamentos |
+| Pacotes | Ramos de 1º nível do mapa mental | Casos de Uso: agrupamentos **diferentes**, por critério diferente — lá, por objetivo do ator (*Descoberta do produto*, *Compra*, *Venda*, *Pós-venda*); aqui, por coesão de domínio (*Contas e Acesso*, *Catálogo e Descoberta*, *Transação*, *Pós-venda*). Só *Pós-venda* coincide |
 
 ---
 
@@ -146,7 +158,8 @@ Escolhi a segunda por uma razão que a própria Entrega 1 deixou registrada. A s
 - **`Envio` referencia `Endereco` sem snapshot.** Registrado na decisão 4: é fiel ao observado, mas um sistema de produção precisaria congelar o endereço no momento da confirmação. Não modelei porque não vi.
 - **`Reputacao` não tem fórmula.** Sei que existe, sei de onde vem (RN-A05) e sei que aparece na listagem; não sei como é calculada. O atributo derivado registra a dependência sem fingir conhecimento do cálculo.
 - **`Atendente` e `Reclamacao` são inferidos do Rich Picture, não observados.** O fluxo de reclamação não é acessível sem uma compra realizada. Estão no modelo porque o Rich Picture os registrou e porque sem eles o domínio do pós-venda ficaria vazio — mas são as classes de origem mais fraca do diagrama.
-- **O diagrama é grande.** Vinte e cinco classificadores em quatro pacotes exigem zoom. Considerei dividi-lo em quatro diagramas, um por pacote, e não o fiz porque as associações que cruzam pacotes — `Anuncio` como hub, `Envio` ligando transação a contas e a vendedor — são exatamente o que o modelo precisa mostrar. A legenda embutida e o clique para tela cheia são o compromisso adotado.
+- **`ServicoDeEntrega` é escolha de consistência, não observação.** A interface mostra que o frete aparece na ficha (RN-A04); não mostra *quem* o calcula. Um serviço de domínio separado é a forma que faz Classes, Sequência e Componentes dizerem a mesma coisa — mas a implementação real pode calcular o frete dentro do catálogo, ou fora da plataforma.
+- **O diagrama é grande.** Trinta classificadores — 24 classes e 6 enumerações — em quatro pacotes exigem zoom. Considerei dividi-lo em quatro diagramas, um por pacote, e não o fiz porque as associações que cruzam pacotes — `Anuncio` como hub, `Envio` ligando transação a contas e a vendedor — são exatamente o que o modelo precisa mostrar. A legenda embutida e o clique para tela cheia são o compromisso adotado.
 
 ---
 
@@ -170,4 +183,5 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
-| 1.0 | 17/09/2026 | Criação da página; diagrama de classes do domínio completo, decisões de modelagem rastreadas à Engenharia Reversa da Entrega 1, elos com os demais diagramas e limites | Pedro Luciano de Azevedo | -- |
+| 1.0 | 17/09/2026 | Criação da página; diagrama de classes do domínio completo, decisões de modelagem rastreadas à Engenharia Reversa da Entrega 1, elos com os demais diagramas e limites | Pedro Luciano de Azevedo | Patrick Anderson Carvalho dos Santos — revisão em pares do diagrama, [16/09/2026](/ReunioesAtas/Subequipe1/Ata16_09.md) |
+| 1.1 | 17/09/2026 | Atualização após as revisões em pares: decisão 11 (`calcularFrete` movido de `Envio` para o serviço de domínio `ServicoDeEntrega`), `StatusPedido` alinhado aos doze estados da Máquina do Pedido, passo 8 da montagem, correção da afirmação sobre os pacotes do Casos de Uso, referência cruzada `Atendente`/`Atendimento`, contagem de classificadores e novo limite | Pedro Luciano de Azevedo | Patrick Anderson Carvalho dos Santos — revisão em pares do relatório, [17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md) |

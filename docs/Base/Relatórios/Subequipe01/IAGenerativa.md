@@ -95,6 +95,6 @@ A principal lição que levo é que a IA pode contribuir para a revisão e o apr
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
-| 1.0    | 16/09/2026 | Criação da página; lições aprendidas e senso crítico sobre o uso de IA generativa na modelagem UML | Pedro Luciano de Azevedo | --          |
+| 1.0    | 16/09/2026 | Criação da página; lições aprendidas e senso crítico sobre o uso de IA generativa na modelagem UML | Pedro Luciano de Azevedo | Patrick Anderson Carvalho dos Santos — revisão em pares do relatório, [17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md) |
 | 1.1 | 17/09/2026 | Criação da página e redação do ponto de vista de Patrick Anderson sobre lições aprendidas e uso de IA generativa | Patrick Anderson | -- |
 | 1.2 | 17/09/2026 | Redação do ponto de vista de Guilherme Costa Zanella sobre lições aprendidas e uso de IA generativa na modelagem do Diagrama de Casos de Uso e do Diagrama de Atividades | Guilherme Costa Zanella | -- |

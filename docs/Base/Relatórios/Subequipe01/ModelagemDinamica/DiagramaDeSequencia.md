@@ -24,7 +24,7 @@ Larman (2004) chama de *diagrama de sequência de sistema* a variante em que o s
 
 <sub>Clique na imagem para abrir em tela cheia, com zoom.</sub>
 
-> _Figura 2 — Diagrama de Sequência do fluxo de busca e escolha de produto, com o comprador não autenticado. Participantes: o comprador (ator), a aplicação web (`boundary`), o serviço de catálogo e o serviço de entrega (`control`) e o índice do catálogo (`entity`). Mensagens numeradas de 1 a 39. Fragmentos `loop`, `alt` e `opt` com guardas que citam a regra de negócio correspondente. A nota vermelha marca o requisito não satisfeito. Fonte: Subequipe 01, 2026._
+> _Figura 2 — Diagrama de Sequência do fluxo de busca e escolha de produto, com o comprador não autenticado. Participantes: o comprador (ator), a aplicação web (`boundary`), o serviço de catálogo e o serviço de entrega (`control`) e o índice do catálogo (`entity`). Mensagens numeradas de 1 a 41. Fragmentos `loop`, `alt` e `opt` com guardas que citam a regra de negócio correspondente. A nota vermelha marca o requisito não satisfeito. Fonte: Subequipe 01, 2026._
 
 
 ---
@@ -45,8 +45,9 @@ Entre os diagramas dinâmicos, o de sequência foi escolhido em vez do de ativid
 | 2 | Cada transição observada virou uma mensagem do comprador para a fronteira; cada resposta observada, uma mensagem de retorno |
 | 3 | Para cada resposta, perguntei *que participante interno precisa existir para produzi-la* — daí o serviço de catálogo, o índice e o serviço de entrega |
 | 4 | As regras de negócio RN-A01 a RN-A06 foram posicionadas como guardas de fragmento ou como notas sobre a mensagem que as evidencia |
-| 5 | Os tipos das mensagens foram tomados do [Diagrama de Classes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeClasses.md): `ConsultaCatalogo`, `Listagem`, `Faceta` |
+| 5 | Os tipos das mensagens foram tomados do [Diagrama de Classes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeClasses.md): `ConsultaCatalogo`, `Listagem`, `Faceta` e, para o frete, `ServicoDeEntrega.calcularFrete` |
 | 6 | O bloco final foi modelado como `alt` porque a observação da Entrega 1 (etapa 4, provocação de exceções) mostrou que o retorno é o ponto de falha |
+| 7 | Revisão em pares ([reunião de 16/09/2026](/ReunioesAtas/Subequipe1/Ata16_09.md)): a chamada de frete, que saía da fronteira direto para o serviço de entrega, passou a ser roteada pelo serviço de catálogo (mensagens 31–34), alinhando a Sequência à dependência `Serviço de Catálogo → IFrete` do [Diagrama de Componentes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeComponentes.md). O diagrama passou de 39 para 41 mensagens |
 
 ---
 
@@ -58,8 +59,8 @@ Entre os diagramas dinâmicos, o de sequência foi escolhido em vez do de ativid
 | Busca | 5–15 | RN-A02, RN-A03, RN-A06, RN-A05, RN-A01 | A ordenação padrão é fixada pela fronteira antes de chamar o serviço; a contagem por faceta é uma automensagem do serviço **dentro** da ativação da busca; a URL é atualizada antes da exibição |
 | Refinamento | 16–21, `opt` | RF-A02, RF-A03, RNF-A03 | Aplicar faceta é uma nova busca com a consulta derivada — e uma nova atualização de URL |
 | Rolagem | 22–25, `loop` | Inventário: carregamento por rolagem, sem paginação clicável | Cada rolagem é `buscar(proximaPagina())`; os cartões são **acrescentados** à mesma página |
-| Ficha | 26–33 | RN-B09, RF-A04, RN-A04 | A ficha traz oferta principal e concorrentes numa única resposta; o frete é um `opt` que envolve um terceiro participante |
-| Retorno | 34–39, `alt` | RNF-A02 | A fronteira reconstrói a consulta de `ConsultaCatalogo.deURL(url)` e pede a **página 1** — os filtros voltam, a posição não |
+| Ficha | 26–35 | RN-B09, RF-A04, RN-A04 | A ficha traz oferta principal e concorrentes numa única resposta (28); o frete é um `opt` em que a fronteira pede ao serviço de catálogo (31), o catálogo pede ao serviço de entrega — `cotarFrete`, 32 — e a resposta volta pelo mesmo caminho (33 e 34) |
+| Retorno | 36–41, `alt` | RNF-A02 | A fronteira reconstrói a consulta de `ConsultaCatalogo.deURL(url)` e pede a **página 1** — os filtros voltam, a posição não |
 
 ---
 
@@ -68,8 +69,8 @@ Entre os diagramas dinâmicos, o de sequência foi escolhido em vez do de ativid
 O bloco final é o motivo de este diagrama existir. Na Entrega 1, RNF-A02 — *preservar filtros e posição ao retornar à listagem* — foi registrado como requisito que o sistema **não satisfaz**, e o SIG atribuiu a causa à rolagem infinita com uma contribuição `−−` sobre *Reversibilidade*. O que faltava era mostrar o mecanismo. O diagrama de sequência mostra:
 
 - na mensagem 14, a fronteira grava a consulta na URL — mas a consulta tem `pagina`, e a rolagem infinita (mensagens 22–25) carrega páginas **sem** atualizar esse campo, porque não há transição de página do ponto de vista do comprador;
-- na mensagem 35, o "voltar" reconstrói a consulta da URL — e obtém a página 1, porque foi isso que ficou gravado;
-- logo, a mensagem 38 devolve os filtros certos na posição errada.
+- na mensagem 37, o "voltar" reconstrói a consulta da URL — e obtém a página 1, porque foi isso que ficou gravado;
+- logo, a mensagem 40 devolve os filtros certos na posição errada.
 
 A URL guarda o filtro e nada guarda a posição. Não é um defeito de implementação do "voltar": é uma consequência lógica de combinar estado na URL com rolagem infinita. O diagrama transforma o que era uma observação empírica ("a listagem reinicia do topo") em uma explicação estrutural, e essa explicação é a que o Diagrama de Classes já antecipava ao dar a `ConsultaCatalogo` um campo `pagina` que a rolagem não alimenta.
 
@@ -84,7 +85,8 @@ A URL guarda o filtro e nada guarda a posição. Não é um defeito de implement
 | `ConsultaCatalogo`, `Listagem`, `Faceta` | Diagrama de Classes | — |
 | `loop` de autocompletar e `loop` de rolagem | RF-A01; inventário | SIG da Entrega 1: correlações `−` sobre *Tempo de Resposta* |
 | `alt` de retorno | Etapa 4 da Engenharia Reversa; RNF-A02 | SIG da Entrega 1: `−−` de *Rolagem infinita* sobre *Reversibilidade*; claim C1 |
-| Mensagem 39, `adicionarAoCarrinho` | T-B01 | Modelo 1 do BPMN da Entrega 1; [Máquina de Estados](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) do Pedido |
+| Mensagem 41, `adicionarAoCarrinho` | T-B01 | Modelo 1 do BPMN da Entrega 1; [Máquina de Estados](/Base/Relatórios/Subequipe01/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) do Pedido |
+| Mensagens 31–34, `calcularFrete` e `cotarFrete` | RN-A04; Diagrama de Classes: `ServicoDeEntrega.calcularFrete` (decisão 11) | Diagrama de Componentes: a mensagem 32 **é** a dependência `Serviço de Catálogo → IFrete` (decisão 2 daquela página) |
 | `Serviço de Catálogo`, `Serviço de Entrega` | — | [Diagrama de Componentes](/Base/Relatórios/Subequipe01/ModelagemEstatica/DiagramaDeComponentes.md): `ICatalogo`, `IFichaProduto`, `IFrete` |
 
 ---
@@ -96,6 +98,7 @@ A URL guarda o filtro e nada guarda a posição. Não é um defeito de implement
 - **A rolagem infinita foi modelada como busca da próxima página.** É coerente com o comportamento, mas a implementação real pode usar cursor, offset ou pré-carregamento — três estratégias com custos diferentes que o diagrama não distingue.
 - **O `alt` final assume que o comprador volta com o botão do navegador.** Foi assim que a exceção foi provocada na Entrega 1. Um botão "voltar" da própria aplicação poderia se comportar diferente; não foi observado nenhum.
 - **A explicação do achado é dedução, não confirmação.** Que a URL não recebe a página durante a rolagem é consistente com tudo o que foi visto, mas não inspecionei a URL durante a rolagem na Entrega 1 — inspecionei antes e depois. É a hipótese mais econômica, e fica registrada como tal.
+- **O roteamento do frete pelo catálogo é escolha de consistência, não observação.** A interface mostra que o frete aparece na ficha (RN-A04); não mostra se a fronteira fala com o serviço de entrega diretamente ou através do catálogo. A Sequência segue o Componentes — `Serviço de Catálogo → IFrete` — para que os dois digam a mesma coisa; a implementação real pode ser a outra.
 
 ---
 
@@ -117,4 +120,5 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
-| 1.0 | 17/09/2026 | Criação da página; diagrama de sequência do fluxo de busca e escolha de produto, com fragmentos combinados rastreados às regras do Recorte A e explicação estrutural do RNF-A02 não satisfeito | Pedro Luciano de Azevedo | -- |
+| 1.0 | 17/09/2026 | Criação da página; diagrama de sequência do fluxo de busca e escolha de produto, com fragmentos combinados rastreados às regras do Recorte A e explicação estrutural do RNF-A02 não satisfeito | Pedro Luciano de Azevedo | Patrick Anderson Carvalho dos Santos — revisão em pares do diagrama, [16/09/2026](/ReunioesAtas/Subequipe1/Ata16_09.md) |
+| 1.1 | 17/09/2026 | Atualização após as revisões em pares: chamada de frete roteada pelo serviço de catálogo (mensagens 31–34, passo 7 da montagem), numeração de 41 mensagens na figura, nos blocos, no achado e na rastreabilidade, linha de rastreabilidade para `calcularFrete`/`cotarFrete` e novo limite | Pedro Luciano de Azevedo | Patrick Anderson Carvalho dos Santos — revisão em pares do relatório, [17/09/2026](/ReunioesAtas/Subequipe1/Ata17_09.md) |
