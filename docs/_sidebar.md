@@ -44,6 +44,7 @@
             - [Diagrama de Sequência](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeSequencia.md)
             - [Diagrama de Atividades](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeAtividades.md)
             - [Diagrama de Estados](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md)
+            - [Diagrama de Comunicção](/Base/Relatórios/Subequipe02/ModelagemDinamica/DiagramaDeComunicacao.md)
       - 1.1.3. SubEquipe_03
         - [Metodologia](/Base/Relatórios/Subequipe03/Metodologia.md)
         - [Rastreabilidade da Metodologia](/Base/Relatórios/Subequipe03/RastreabilidadeMetodologia.md)
