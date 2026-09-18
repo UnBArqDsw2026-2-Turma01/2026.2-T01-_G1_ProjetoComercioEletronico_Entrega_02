@@ -55,8 +55,15 @@ Enquanto eu estava fazendo os registros das práticas da metodologia, me surgira
 ## Pedro Henrique Gomes
 
 ### Lições aprendidas
+Durante o desenvolvimento dos diagramas de implantação e atividades, aprofundei significativamente meu entendimento sobre a notação UML e a modelagem arquitetural. No Diagrama de Implantação, aprendi a estruturar adequadamente a topologia física de um sistema, separando claramente os nós de execução (como o ambiente do cliente, redes intermediárias e infraestrutura em nuvem) e representando as ligações de comunicação de forma coerente. Já na elaboração dos Diagramas de Atividades, consolidei meus conhecimentos sobre a modelagem de fluxos dinâmicos. Foi valioso entender, na prática, como utilizar barras de sincronização (`fork` e `join`) para representar execuções paralelas e como organizar fluxos complexos em diferentes raias (*swimlanes*) para delimitar perfeitamente as responsabilidades de cada ator ou serviço integrado.
 
 ### Uso de IA Generativa
+
+#### Estruturação do Diagrama de Implantação e Mapeamento de Dados Reais
+Utilizei a IA para me orientar sobre como iniciar o desenvolvimento do diagrama de implantação, fosse a partir de textos base ou da análise de testes empíricos. A IA foi crucial para me ajudar a entender como traduzir serviços reais para o modelo estático da UML. Por exemplo, ela me auxiliou a mapear corretamente componentes específicos de infraestrutura em nuvem (como instâncias e serviços da AWS) em nós (*nodes*) e artefatos dentro do diagrama, garantindo que as evidências reais se encaixassem na notação arquitetural adequada.
+
+#### Auxílio na Sintaxe Markdown
+Além da modelagem UML, utilizei a IA para tirar dúvidas e aprimorar a sintaxe dos documentos escritos em Markdown. A ferramenta me auxiliou na formatação correta de tabelas, inserção de imagens centralizadas, alinhamento de textos e na estruturação geral do documento, garantindo que a entrega final tivesse uma apresentação profissional, limpa e coesa com o padrão estabelecido pelos demais membros do projeto.
 
 ---
 
@@ -66,4 +73,4 @@ Enquanto eu estava fazendo os registros das práticas da metodologia, me surgira
 | -- | -- | -- | -- | -- |
 | 1.0 | 14/09/2026 | Criação da página | José Joaquim da Silva Neto | -- |
 | 1.1 | 15/09/2026 | Adiciona evidências do uso de ia | José Joaquim da Silva Neto | -- |
-
+| 1.2 | 17/09/2026 | Adiciona lições aprendidas e uso de IA| Pedro Henrique Gomes | -- |
