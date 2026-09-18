@@ -17,7 +17,7 @@
   - [1. Desenho de Software (Modelagem)](/Base/1.Modelagem.md)
   - Relatórios
       - [1.1.1. SubEquipe_01](/Base/Relatórios/1.1.1.SubEquipe_01.md)
-      - 1.1.2. SubEquipe_02
+      - [1.1.2. SubEquipe_02](/Base/Relatórios/1.1.2.SubEquipe_02.md)
         - [Metodologia](/Base/Relatórios/Subequipe02/Metodologia.md)
         - [Rastreabilidade da Metodologia](/Base/Relatórios/Subequipe02/RastreabilidadeMetodologia.md)
         - [Uso de IA generativa e lições aprendidas](/Base/Relatórios/Subequipe02/IAGenerativa.md)
