@@ -16,6 +16,8 @@ Este documento apresenta as **lições aprendidas** e o **uso de Inteligência A
 
 ### Lições aprendidas
 
+Ao longo desta entrega de modelagem UML do sistema de e-commerce, uma das principais lições aprendidas foi que um diagrama tecnicamente correto na sintaxe não é o mesmo que um diagrama semanticamente correto. Também aprendi, na prática, o valor de encapsular regras de validação em Value Objects em vez de tipos primitivos soltos, e a diferença real entre composição e associação como uma decisão que comunica quem controla o ciclo de vida de quem não, um mero detalhe estético do diagrama. Outra lição importante foi perceber que diagramas diferentes do mesmo sistema (classes, pacotes, atividades) precisam ser consistentes entre si: uma seta invertida no diagrama de atividades que contradiz a direção de dependência definida no diagrama de classes é um erro de modelagem, mesmo que cada diagrama, isoladamente, pareça correto. Por fim, comparar nosso modelo com a arquitetura real do Mercado Livre me ensinou que modelagem de domínio e arquitetura de infraestrutura são preocupações propositalmente separadas e que reconhecer as limitações e simplificações de um modelo, em vez de escondê-las, é o que de fato demonstra domínio crítico da disciplina.
+
 ### Uso de IA Generativa
 
 #### Diagrama de Classes
@@ -74,3 +76,4 @@ Além da modelagem UML, utilizei a IA para tirar dúvidas e aprimorar a sintaxe 
 | 1.0 | 14/09/2026 | Criação da página | José Joaquim da Silva Neto | -- |
 | 1.1 | 15/09/2026 | Adiciona evidências do uso de ia | José Joaquim da Silva Neto | -- |
 | 1.2 | 17/09/2026 | Adiciona lições aprendidas e uso de IA| Pedro Henrique Gomes | -- |
+| 1.3 | 18/09/2026 | Adiciona lições aprendidas | José Joaquim da Silva Neto | -- |

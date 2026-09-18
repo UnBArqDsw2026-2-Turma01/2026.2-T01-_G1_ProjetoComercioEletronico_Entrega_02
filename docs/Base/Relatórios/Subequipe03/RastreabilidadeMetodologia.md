@@ -28,7 +28,7 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | Daily check-in — Sprint 2 (dia 3) | 14/09/2026 | Check-in assíncrono diário | 14/09/2026 | <a href="Assets/Subequipe3/Check-in/dailypresencial1409.jpeg" target="_blank">Evidência_Grupo</a> | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Daily check-in — Sprint 2 (dia 4) | 15/09/2026 | Check-in assíncrono diário | 15/09/2026 | <a href="Assets/Subequipe3/Check-in/EvidenciaPedroJulia1509.jpeg" target="_blank">Evidência Pedro e Júlia</a><br><a href="Assets/Subequipe3/Check-in/EvidenciaJoaquim1509.jpeg" target="_blank">Evidência Joaquim</a> | <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 | Sprint 2 Review | 16/09/2026 |Apresentação final de todos os diagramas | 16/09/2026 | <a href="Assets/Subequipe3/Check-in/EvidenciaJoaquimPedroJoao1609.jpeg" target="_blank">Evidência Joaquim, Pedro e João</a> |  <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
-| Sprint 2 Retrospective | 17/09/2026 |Reflexão sobre o processo geral do projeto | | |  <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| Sprint 2 Retrospective | 17/09/2026 |Reflexão sobre o processo geral do projeto | 17/09/2026 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata17_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao17_09.md) |  <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> |
 
 *Legenda de status:* <span style="color: #32CD32; font-weight: bold;">Concluído com evidência</span> · <span style="color: #2c07ff; font-weight: bold;">Concluído sem evidência registrada</span>
  · <span style="color: #FFD700; font-weight: bold;">Pendente</span> · <span style="color: #FF073A; font-weight: bold;">Não Realizado</span>
@@ -42,16 +42,16 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 
 | # | Item do backlog | Sprint | Responsável | Data de conclusão | Evidência (arquivo/commit) | Critério de Pronto atendido? | Status |
 |---|---|---|---|---|---|---|---|
-| 1 | Levantamento de entidades e atores do domínio | 1 | TODOS| | Documentação realizada na entrega 1 a partir da engenharia reversa| <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 1 | Levantamento de entidades e atores do domínio | 1 | TODOS| Entrega 1| Documentação realizada na entrega 1 a partir da engenharia reversa| <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 2 | Diagrama de Classes | 1 | José Joaquim | 11/09/26 | [Diagrama de Classes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeClasses.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 3 | Diagrama de Implantação | 1 | Pedro Henrique | | [Diagrama de Implantação](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeImplantacao.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 4 | Diagrama de Componentes | 1 | João Paulo | | [Diagrama de Componentes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeComponentes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 3 | Diagrama de Implantação | 1 | Pedro Henrique | 15/09/26 | [Diagrama de Implantação](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeImplantacao.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 4 | Diagrama de Componentes | 1 | João Paulo | 17/09/26 | [Diagrama de Componentes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeComponentes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 5 | Diagrama de Pacotes | 1 | José Joaquim | 13/09/26 | [Diagrama de Pacotes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDePacotes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | | [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeCasosDeUso.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | 18/09/26 | [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeCasosDeUso.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 7 | Diagrama de Sequência | 2 | TODOS| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 8 | Diagrama de Atividades | 2 | José Joaquim e Pedro Henrique| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 9 | Diagrama de Máquina de Estados | 2 | João Paulo e Júlia Campos| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
-| 10 | Revisão geral e consolidação | 2 | TODOS | | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 8 | Diagrama de Atividades | 2 | José Joaquim e Pedro Henrique| 17/09/26 | [Diagrama de Atividades](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeAtividades.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 9 | Diagrama de Máquina de Estados | 2 | João Paulo e Júlia Campos| 17/09/26 | [Diagrama de Máquina de Estados](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 10 | Revisão geral e consolidação | 2 | TODOS | 17/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata17_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao17_09.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 
 O critério de "Pronto" referenciado nesta tabela é o definido na seção 8 da documentação da metodologia (revisão por outro integrante, consistência entre diagramas, versionamento e notação UML padrão).
 
@@ -98,7 +98,7 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 
 ## 7. Conclusão da rastreabilidade
 
-*(Preencher ao final do projeto)* Resumo geral do nível de aderência do grupo à metodologia planejada — por exemplo, percentual de eventos realizados conforme planejado, percentual de itens do backlog entregues dentro do Sprint originalmente previsto, e principais aprendizados quanto ao processo.
+A metodologia adotada nessa entrega teve um excelente resultado. Conforme registrado na reunião final da última sprint (sprint 2), [Clique aqui para acessar a gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao17_09.md), os membros da subequipe 03 declaram seus feedbacks sobre a prática da metodologia adotada. No geral, a organização da subequipe foi bem melhor, resultando em melhores resultados de entrega e também em um processo com uma rastreabilidade melhor.
 
 ## Histórico de Versões
 
@@ -119,3 +119,5 @@ Liste aqui qualquer desvio entre o que foi planejado na metodologia e o que efet
 | 2.2 | 15/09/2026 | Adiciona divergência na prática da metodologia durante as Dailys check-in do dia 05/09/2026 até 07/09/2026 | José Joaquim da Silva Neto | -- |
 | 2.3 | 15/09/2026 | Adiciona papéis exercidos durante as práticas da metodologia | José Joaquim da Silva Neto | Pedro Henrique Gomes |
 | 2.4 | 16/09/2026 | Adiciona check in de participação diária do dia 16/09/26 | José Joaquim da Silva Neto | -- |
+| 2.5 | 18/09/2026 | Atualiza matriz de rastreabilidade | José Joaquim da Silva Neto | -- |
+| 2.6 | 18/09/2026 | Atualiza matriz de rastreabilidade com elo para a reunião final | José Joaquim da Silva Neto | -- |
