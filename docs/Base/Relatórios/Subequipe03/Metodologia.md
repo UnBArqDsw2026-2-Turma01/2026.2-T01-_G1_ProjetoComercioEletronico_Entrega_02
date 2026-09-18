@@ -90,8 +90,8 @@ Lista priorizada de todos os diagramas e entregáveis do projeto. Serve como fon
 | 4 | Diagrama de Componentes | Estático | Média |
 | 5 | Diagrama de Pacotes | Estático | Baixa |
 | 6 | Diagrama de Casos de Uso | Dinâmico | Alta |
-| 7 | Diagrama de Sequência | Dinâmico | Alta |
-| 8 | Diagrama de Atividades | Dinâmico | Média |
+| 7 | Diagrama de Sequência | Dinâmico | Baixa |
+| 8 | Diagrama de Atividades | Dinâmico |  Alta |
 | 9 | Diagrama de Máquina de Estados | Dinâmico | Média |
 | 10 | Revisão geral e consolidação | Transversal | Alta |
 
