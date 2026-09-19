@@ -20,6 +20,26 @@
 
 </div>
 
+<div style="text-align:center;">
+
+![Diagrama de Sequência — Compras](../../../../Assets/Subequipe3/FluxoCompraDiagramaSequencia.png)
+
+<p><strong>Diagrama de Sequência — Compras</strong> — Diagrama de sequência cobrindo todo o processo de compra. <br> <em>Autor: José Joaquim da Silva Neto</em></p>
+
+[Clique aqui para baixar a imagem!](../../../../Assets/Subequipe3/FluxoCompraDiagramaSequencia.png ':ignore')
+
+</div>
+
+<div style="text-align:center;">
+
+![Diagrama de Sequência — Devolução e estorno](../../../../Assets/Subequipe3/FluxoCompraDiagramaSequencia.png)
+
+<p><strong>Diagrama de Sequência — Devolução e estorno</strong> — Diagrama de sequência cobrindo todo o processo de devolução e estorno. <br> <em>Autor: José Joaquim da Silva Neto</em></p>
+
+[Clique aqui para baixar a imagem!](../../../../Assets/Subequipe3/FluxoCompraDiagramaSequencia.png ':ignore')
+
+</div>
+
 ## 1. Introdução
 
 Este documento apresenta o par de diagramas de sequência do subsistema `SistemaLoginCadastroML`: um para o fluxo de **Login** e outro, complementar, para o fluxo de **Cadastro**. Os dois compartilham a mesma fronteira (`UI de login e cadastro`) e vários dos mesmos serviços de apoio, e por isso são documentados juntos nesta página.
@@ -85,14 +105,61 @@ O fluxo segue a ordem de preenchimento do formulário (e-mail, dados pessoais, s
 | Achado-C07 | Troca de canal de verificação | Alternância entre SMS e ligação de voz durante a própria verificação |
 | Achado-C08 | Troca de número informado | Permite corrigir o número sem reiniciar o cadastro inteiro |
 
-## 5. Decisões de Design e Senso Crítico
+## 5. Diagrama de Sequência — Fluxo de Compra
+
+### 5.1 Participantes
+
+| Participante | Estereótipo | Papel |
+|---|---|---|
+| Cliente | `actor` | Inicia a finalização da compra |
+| CarrinhoController | `boundary` | Recebe a solicitação de finalização de compra |
+| CarrinhoService / PedidoService / PagamentoService | `control` | Orquestram carrinho, criação do pedido e processamento de pagamento |
+| CarrinhoDeCompras / Pedido / Pagamento / Estoque / NotaFiscal | `entity` | Objetos de domínio que concentram o estado e as regras de negócio |
+| ProcessadorPagamento | `control` (interface, Strategy Pattern) | Contrato para processamento de pagamento, implementado externamente |
+| ProcessadorCartao | `boundary` (externo) | Operadora de cartão que efetivamente processa o pagamento |
+| Notificador | `control` (interface, Strategy Pattern) | Contrato para envio de notificações |
+| NotificadorEmail | `boundary` (externo) | Provedor que efetivamente envia o e-mail ao cliente |
+
+### 5.2 Fluxo de Mensagens
+
+O diagrama cobre três momentos: (i) a criação do pedido a partir do carrinho, com reserva de estoque item a item (`loop`); (ii) a bifurcação `alt` entre pagamento aprovado e recusado; (iii), no ramo de aprovação, a cadeia de confirmação — baixa de estoque, emissão de nota fiscal, notificação e atualização de status da entrega.
+
+### 5.3 Base das guardas e notas
+
+Diferente dos diagramas de Login/Cadastro, as guardas deste diagrama não derivam de achados de tráfego observado, e sim das regras já formalizadas no **Diagrama de Classes** do sistema — em especial as enumerações `StatusPedido`/`StatusPagamento` e o Strategy Pattern (`ProcessadorPagamento`, `Notificador`). Por isso, a tabela equivalente aqui substitui "achado/evidência" por "elemento de origem":
+
+| Guarda/Nota | Mensagem(ns) | Elemento de origem |
+|---|---|---|
+| `alt` pagamento aprovado/recusado | `processar(valor)` → resultado | `StatusPagamento` (enumeração, Diagrama de Classes) |
+| `loop` reserva de estoque | `reservar(quantidade)` por item | Composição `Pedido ◆── ItemPedido` |
+| Direção `Pagamento → ProcessadorPagamento` | `estornar()`/`processar()` | Associação `Pagamento ──► ProcessadorPagamento` (Strategy Pattern) |
+
+## 6. Diagrama de Sequência — Devolução e Estorno
+
+### 6.1 Participantes
+
+Reaproveita `PagamentoService`, `Pagamento`, `ProcessadorPagamento`, `ProcessadorCartao`, `Notificador` e `NotificadorEmail` da Seção 5.1, substituindo `CarrinhoService` por `PedidoController`/`PedidoService` como ponto de entrada, e acrescentando `Entrega` e `NotaFiscal` como entidades adicionais envolvidas no cancelamento.
+
+### 6.2 Fluxo de Mensagens
+
+O fluxo modela a solicitação de devolução de um pedido já entregue, com uma bifurcação `alt` entre devolução aprovada e recusada. No ramo de aprovação, a sequência de cancelamento (entrega, pedido, nota fiscal, reposição de estoque) precede o estorno, que segue a mesma cadeia de delegação do Strategy Pattern usada no pagamento — `Pagamento.estornar()` aciona `ProcessadorPagamento.estornar()`, nunca o inverso.
+
+### 6.3 Base das guardas e notas
+
+| Guarda/Nota | Mensagem(ns) | Elemento de origem |
+|---|---|---|
+| `alt` devolução aprovada/recusada | `analisarSolicitacao(motivo)` | Regra de negócio do Diagrama de Atividades — Devolução e Estorno |
+| Ordem `Pagamento → ProcessadorPagamento` no estorno | `estornar()` | Mesma associação do Diagrama de Classes citada na Seção 5.3 — reforça a consistência entre pagamento e estorno |
+
+
+## 7. Decisões de Design e Senso Crítico
 
 - **Notas de achado em vez de regras de negócio.** Onde um diagrama de sequência de projeto cita uma regra de negócio definida pela equipe, estes dois diagramas citam um achado de investigação, com o tipo de evidência que o sustenta (rede, telemetria, script). A escolha é deliberada: atribuir uma "regra de negócio" a um sistema de terceiros observado de fora seria apresentar inferência como especificação.
 - **CAPTCHA modelado duas vezes, de formas diferentes.** O reCAPTCHA do Login (invisível, Achado-L01) e o CAPTCHA do Cadastro (desafio explícito, Achado-C01) não foram unificados em um único participante genérico "Captcha", ainda que ambos apareçam como `boundary` externo. Mantê-los como instâncias de mensagem distintas, cada uma com sua nota, preserva um achado relevante: a plataforma trata os dois pontos de entrada com posturas de fricção visivelmente diferentes.
 - **`Serviço de Autenticação` e `Serviço de Cadastro` como controladores separados.** Essa separação replica a distinção já adotada no Diagrama de Componentes deste subsistema (Seção 6.1), não uma escolha nova feita aqui — o objetivo foi manter os três artefatos (Componentes, Atividades, Sequência) descrevendo a mesma fronteira interna.
 - **Loop de tentativa em vez de repetição implícita.** Tanto a correção de CPF quanto a validação de código foram modeladas como `loop` explícito com um `alt` interno (inválido/válido), e não como uma única mensagem de "tentar até acertar" — a diferença importa porque cada iteração corresponde a uma troca de mensagens realmente observável (o cooldown do Achado-C06, por exemplo, só faz sentido dentro de um loop com múltiplas rodadas).
 
-## 6. Rastreabilidade
+## 8. Rastreabilidade
 
 | Elemento | Vem de | Vai para |
 |---|---|---|
@@ -102,7 +169,7 @@ O fluxo segue a ordem de preenchimento do formulário (e-mail, dados pessoais, s
 | Achados L01–L05, C01–C08 | Coletas de engenharia reversa (headers HTTP, scripts, telemetria) | SIG/NFR Framework: softgoals `Security[Login]`, `Accessibility[Login]`, `Privacy[Plataforma]`, entre outros já documentados |
 | Nota final de cada diagrama | — | Diagrama de Sequência complementar (Login ⇄ Cadastro) |
 
-## 7. Limites do Artefato
+## 9. Limites do Artefato
 
 - **A fronteira interna entre "Serviço de Autenticação" e "Serviço de Cadastro" é uma partição lógica, não uma confirmação de arquitetura.** A coleta de rede confirma que ambas as funcionalidades existem e respondem de formas distintas; não confirma se, na implementação real, são dois serviços fisicamente separados ou módulos de um mesmo serviço.
 - **O `Serviço de Verificação e Notificação` foi inferido a partir do comportamento, não observado como componente isolado.** É a explicação mais simples para o padrão de mensagens visto (canais alternativos, cooldown), mas o diagrama não tem como provar que não existem etapas intermediárias adicionais.
@@ -125,4 +192,5 @@ O fluxo segue a ordem de preenchimento do formulário (e-mail, dados pessoais, s
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | -- | -- | -- | -- | -- |
 | 1.0 | 14/09/2026 | Criação da página | José Joaquim da Silva Neto | -- |
-| 1.0 | 18/09/2026 | Criação da página; diagramas de sequência de Login e Cadastro, com achados de engenharia reversa como guardas de fragmento | Pedro Henrique Gomes | -- |
+| 1.1 | 18/09/2026 | Criação da página; diagramas de sequência de Login e Cadastro, com achados de engenharia reversa como guardas de fragmento | Pedro Henrique Gomes | -- |
+| 1.2 | 18/09/2026 | Adiciona diagramas de sequência de Compras e Estorno e devolução bem como sua devida documentação | José Joaquim da Silva Neto | -- |
