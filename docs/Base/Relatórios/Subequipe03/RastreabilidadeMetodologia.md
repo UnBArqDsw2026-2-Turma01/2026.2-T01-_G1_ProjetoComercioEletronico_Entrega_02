@@ -48,10 +48,11 @@ Este documento tem como finalidade evidenciar, de forma rastreável, que os elem
 | 4 | Diagrama de Componentes | 1 | João Paulo | 17/09/26 | [Diagrama de Componentes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeComponentes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 5 | Diagrama de Pacotes | 1 | José Joaquim | 13/09/26 | [Diagrama de Pacotes](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDePacotes.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 6 | Diagrama de Casos de Uso | 1 | Júlia Santana | 18/09/26 | [Diagrama de Casos de Uso](/Base/Relatórios/Subequipe03/ModelagemEstatica/DiagramaDeCasosDeUso.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 7 | Diagrama de Sequência | 2 | TODOS| | | Sim / Não | <span style="color: #FFD700; font-weight: bold;">Pendente</span> |
+| 7 | Diagrama de Sequência | 2 | José Joaquim e Pedro Henrique| 18/09/26| [Diagrama de Sequência](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeSequencia.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 8 | Diagrama de Atividades | 2 | José Joaquim e Pedro Henrique| 17/09/26 | [Diagrama de Atividades](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeAtividades.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 | 9 | Diagrama de Máquina de Estados | 2 | João Paulo e Júlia Campos| 17/09/26 | [Diagrama de Máquina de Estados](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeMaquinaDeEstados.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
-| 10 | Revisão geral e consolidação | 2 | TODOS | 17/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata17_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao17_09.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 10 | Diagrama de Comunicação | 2 | José Joaquim e Pedro Henrique| 18/09/26 | [Diagrama de Comunicação](/Base/Relatórios/Subequipe03/ModelagemDinamica/DiagramaDeComunicacao.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
+| 11 | Revisão geral e consolidação | 2 | TODOS | 17/09/26 | [Ata da reunião](/ReunioesAtas/Subequipe3/Ata17_09.md)<br>[Gravação da reunião](/ReunioesAtas/Subequipe3/Gravacao17_09.md) | <span style="color: #32CD32; font-weight: bold;">Sim</span> | <span style="color: #32CD32; font-weight: bold;">Concluído</span> |
 
 O critério de "Pronto" referenciado nesta tabela é o definido na seção 8 da documentação da metodologia (revisão por outro integrante, consistência entre diagramas, versionamento e notação UML padrão). [Clique aqui para acessar a seção do 8 do documento de definição da metodologia!](/Base/Relatórios/Subequipe03/Metodologia.md#definiçãodepronto).
 
@@ -126,4 +127,6 @@ A metodologia adotada nessa entrega teve um excelente resultado. Conforme regist
 | 2.5 | 18/09/2026 | Atualiza matriz de rastreabilidade | José Joaquim da Silva Neto | -- |
 | 2.6 | 18/09/2026 | Atualiza matriz de rastreabilidade com elo para a reunião final | José Joaquim da Silva Neto | -- |
 | 2.7 | 18/09/2026 | Adiciona elo de rastreabilidade para a definição de pronto dos artefatos | José Joaquim da Silva Neto | -- |
+| 2.8 | 18/09/2026 | Adiciona rastreabilidade para os diagramas de sequência e comunicação | José Joaquim da Silva Neto | -- |
+
 
